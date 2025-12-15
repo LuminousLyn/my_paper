@@ -1,0 +1,74 @@
+{
+  "file_path": "/tmp/tmp2__8lbl4.csv",
+  "table_name": "tmp",
+  "table_description": "This table records financial items along with their corresponding monetary values in millions of dollars, likely used for budgeting, financial reporting, or accounting purposes.",
+  "number_of_rows": 8,
+  "column_list": [
+    "Unnamed_0",
+    "Amount_In_Millions"
+  ],
+  "cell_example": [
+    {
+      "Unnamed_0": "2014 net revenue",
+      "Amount_In_Millions": 5735.0
+    },
+    {
+      "Unnamed_0": "Retail electric price",
+      "Amount_In_Millions": 187.0
+    },
+    {
+      "Unnamed_0": "Volume/weather",
+      "Amount_In_Millions": 95.0
+    },
+    {
+      "Unnamed_0": "Waterford 3 replacement steam generator provision",
+      "Amount_In_Millions": 32.0
+    },
+    {
+      "Unnamed_0": "MISO deferral",
+      "Amount_In_Millions": 35.0
+    },
+    {
+      "Unnamed_0": "Louisiana business combination customer credits",
+      "Amount_In_Millions": 107.0
+    },
+    {
+      "Unnamed_0": "Other",
+      "Amount_In_Millions": 14.0
+    },
+    {
+      "Unnamed_0": "2015 net revenue",
+      "Amount_In_Millions": 5829.0
+    }
+  ],
+  "column_description": [
+    {
+      "column_name": "Unnamed_0",
+      "dtype": "object",
+      "example": {
+        "category_examples": [
+          "2014 net revenue",
+          "Retail electric price",
+          "Louisiana business combination customer credits",
+          "Waterford 3 replacement steam generator provision",
+          "MISO deferral"
+        ]
+      },
+      "specific_meaning": "Describes the financial item or account category, with examples such as '2014 net revenue' and 'Retail electric price'"
+    },
+    {
+      "column_name": "Amount_In_Millions",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          95.0,
+          5735.0,
+          5829.0,
+          107.0,
+          14.0
+        ]
+      },
+      "specific_meaning": "Quantifies the financial value associated with each entry, measured in millions of dollars"
+    }
+  ]
+}

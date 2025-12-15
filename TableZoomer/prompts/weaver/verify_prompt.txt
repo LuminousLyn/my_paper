@@ -1,0 +1,45 @@
+**Task**: Verify and validate the multi-step execution plan provided below.
+
+**Role**: You are an expert agent specializing in verifying execution plans for complex questions involving structured table data and unstructured text.
+
+**Given Information**:
+
+1. **User Query**:
+{query}
+
+2. **Table Schema**:
+{table_schema}
+
+3. **Paragraph Schema**:
+{paragraph_schema}
+
+4. **Execution Plan to Verify**:
+{plan}
+
+**Verification Criteria**:
+1. **Format Check**: Each step must begin with a step number and tool name in [SQL]/[Python]/[LLM] format.
+2. **Reasoning Logic**: Steps should form a coherent, logical sequence leading to the final answer.
+3. **Tool Selection**:
+   - Use **SQL** for table operations: filtering, aggregation, sorting, basic math.
+   - Use **Python** for complex calculations, comparisons, reshaping, or intermediate logic.
+   - Use **LLM** for integrating paragraph_schema insights, understanding question semantics, generating explanations or conclusions.
+4. **Column & Data Coverage**: Ensure all relevant columns from the table are properly accessed and processed where needed.
+5. **Paragraph Schema Utilization**:
+   - Steps involving reasoning or explanations should **explicitly use** the content in `paragraph_schema` when appropriate.
+
+**Output Requirements**:
+- If the plan is valid: Return the original plan followed by "✅ Plan verified. No changes needed."
+- If the plan needs corrections: Return the corrected plan followed by a brief explanation of changes.
+
+**Example Valid Output**:
+1. [SQL] Query the table for relevant data
+2. [Python] Calculate the required metrics
+3. [LLM] Generate final answer
+✅ Plan verified. No changes needed.
+
+**Example Corrected Output**:
+1. [SQL] Query the table for 2014 and 2015 net revenue
+2. [Python] Convert values to numeric and calculate difference
+3. [LLM] Generate final answer with explanation
+
+Changed step 2 to explicitly mention converting values to numeric format, which is necessary for accurate calculations.

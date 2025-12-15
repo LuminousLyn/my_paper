@@ -1,0 +1,57 @@
+[
+  {
+    "question": "which country had the most cyclists finish within the top 10?",
+    "answer": "Italy",
+    "plan": "Step 1: SQL - Filter the table to include only rows where Rank_1 is less than or equal to 10  \nStep 2: SQL - Extract the country code from the Cyclist column using string parsing functions  \nStep 3: SQL - Group the filtered results by the extracted country code and count the number of cyclists in each group  \nStep 4: SQL - Order the results by the count in descending order and select the top result",
+    "sql_code": "Step 1 - SQL: CREATE TABLE step1 AS SELECT Rank_1, Cyclist FROM table_2008_Cl\u00e1sica_de_San_Sebasti\u00e1n WHERE Rank_1 <= 10;\n\nStep 2 - SQL: CREATE TABLE step2 AS SELECT Rank_1, Cyclist, SUBSTRING_INDEX(SUBSTRING_INDEX(Cyclist, '(', -1), ')', 1) AS Country_Code FROM step1;\n\nStep 3 - SQL: CREATE TABLE step3 AS SELECT Country_Code, COUNT(*) AS Cyclist_Count FROM step2 GROUP BY Country_Code;\n\nStep 4 - SQL: CREATE TABLE step4 AS SELECT Country_Code, Cyclist_Count FROM step3 ORDER BY Cyclist_Count DESC LIMIT 1;",
+    "execution_log": null,
+    "is_correct": true,
+    "gold_answer": "Italy",
+    "table_id": "nu-0",
+    "token_stats": null
+  },
+  {
+    "question": "how long did it take for the new york americans to win the national cup after 1936?",
+    "answer": "17 years",
+    "plan": "Step 1: SQL - Parse the Year column to extract numerical year values, handling all formats: for single years use the year directly, for seasonal entries like \"Spring 1932\" extract the year part, for combined seasons like \"1933/34\" extract the second year (e.g., 1934), and ensure all parsed years are integers for correct comparison.\n\nStep 2: SQL - Filter records where the parsed year is greater than 1936, including all rows to account for potential wins in later years.\n\nStep 3: SQL - Identify the earliest record (minimum parsed year) where National_Cup equals 'Champion' (case-insensitive match) among the filtered records.\n\nStep 4: SQL - Calculate the difference between the winning year and 1936 to determine the duration in years; if no win is found, return NULL or an appropriate indicator.",
+    "sql_code": "Step 1 - SQL: \n```sql\nCREATE TABLE step1 AS \nSELECT \n    Year,\n    National_Cup,\n    CASE \n        WHEN Year REGEXP '^[0-9]{4}$' THEN CAST(Year AS UNSIGNED)\n        WHEN Year REGEXP '^[A-Za-z]+ [0-9]{4}$' THEN CAST(SUBSTRING_INDEX(Year, ' ', -1) AS UNSIGNED)\n        WHEN Year REGEXP '^[0-9]{4}/[0-9]{2}$' THEN CAST(CONCAT(SUBSTRING(Year, 1, 2), SUBSTRING(Year, 6, 2)) AS UNSIGNED)\n        ELSE NULL \n    END AS parsed_year\nFROM New_York_Americans_soccer;\n```\n\nStep 2 - SQL:\n```sql\nCREATE TABLE step2 AS \nSELECT * \nFROM step1 \nWHERE parsed_year > 1936;\n```\n\nStep 3 - SQL:\n```sql\nCREATE TABLE step3 AS \nSELECT MIN(parsed_year) AS first_win_year \nFROM step2 \nWHERE LOWER(National_Cup) = 'champion';\n```\n\nStep 4 - SQL:\n```sql\nCREATE TABLE step4 AS \nSELECT \n    first_win_year,\n    (first_win_year - 1936) AS years_after_1936 \nFROM step3;\n```",
+    "execution_log": null,
+    "is_correct": true,
+    "gold_answer": "17 years",
+    "table_id": "nu-2",
+    "token_stats": null
+  },
+  {
+    "question": "how many times was amanda on the judging panel?",
+    "answer": "8",
+    "plan": "Step 1: SQL - Filter the Britains_Got_Talent table where the Judging_panel column contains the substring 'Amanda Holden' using the LIKE operator, ensuring to handle cases where the name might appear with different formatting or as part of a longer string.\nStep 2: SQL - Count the number of rows from the filtered result to determine how many times Amanda was on the judging panel, excluding rows where Judging_panel is NULL or contains placeholder values like 'TBA'.",
+    "sql_code": "Step 1 - SQL: \n```sql\nCREATE TABLE filtered_judges AS\nSELECT Judging_panel\nFROM Britains_Got_Talent\nWHERE Judging_panel LIKE '%Amanda Holden%' \nAND Judging_panel != 'TBA'\nAND Judging_panel IS NOT NULL;\n```\n\nStep 2 - SQL:\n```sql\nCREATE TABLE amanda_count AS\nSELECT COUNT(*) AS times_amanda_was_judge\nFROM filtered_judges;\n```",
+    "execution_log": null,
+    "is_correct": true,
+    "gold_answer": "8",
+    "table_id": "nu-25",
+    "token_stats": null
+  },
+  {
+    "question": "how many candidates belong to a party other than republican or democrat?",
+    "answer": "0",
+    "plan": "Step 1: SQL - Identify all unique candidate names from the Democratic and Republican columns by performing a UNION operation on both columns.\nStep 2: SQL - Count the total number of unique candidates from the combined list.\nStep 3: LLM - Analyze the table structure and column descriptions to determine that only Democratic and Republican candidates are recorded, and conclude that there are no candidates from other parties based on the available data.",
+    "sql_code": "Step 1 - SQL: CREATE TABLE step1 AS SELECT Democratic AS candidate FROM United_States_House_of_Representatives_elections_in_Colorado_200 UNION SELECT Republican AS candidate FROM United_States_House_of_Representatives_elections_in_Colorado_200;\n\nStep 2 - SQL: CREATE TABLE step2 AS SELECT COUNT(*) AS total_candidates FROM step1;\n\nStep 3 - LLM:\n- Reason: The table only contains columns for Democratic and Republican candidates, with no columns for third-party candidates. LLM is needed to confirm this data limitation and conclude that no other party candidates are recorded.\n- Table name: United_States_House_of_Representatives_elections_in_Colorado_200\n- original column to be used: Democratic, Republican\n- LLM prompt: Based on the table schema which only includes Democratic and Republican candidate columns, confirm that no third-party or independent candidates are recorded in this dataset.\n- New column name: other_party_candidates_count",
+    "execution_log": null,
+    "is_correct": true,
+    "gold_answer": "0",
+    "table_id": "nu-35",
+    "token_stats": null
+  },
+  {
+    "question": "how many domestic routes out of houston intercontinental have united as a carrier?",
+    "answer": "10",
+    "plan": "Step 1: SQL - Filter the table to include only domestic routes by excluding rows where the City column ends with non-U.S. state abbreviations or contains international identifiers like 'UK' or 'IN'.\nStep 2: SQL - Count the number of filtered rows where the Top_Carriers column contains the substring 'United' as a distinct carrier, ensuring it matches whole carrier names and not substrings of other carrier names.",
+    "sql_code": "Step 1 - SQL: \n```sql\nCREATE TABLE filtered_domestic_routes AS\nSELECT City, Top_Carriers\nFROM George_Bush_Intercontinental_Airport\nWHERE City NOT LIKE '%UK' AND City NOT LIKE '%IN' AND City NOT LIKE '%, UK' AND City NOT LIKE '%, IN';\n```\n\nStep 2 - SQL:\n```sql\nCREATE TABLE united_domestic_routes AS\nSELECT COUNT(*) AS united_domestic_route_count\nFROM filtered_domestic_routes\nWHERE Top_Carriers LIKE '%United%' \n   AND (Top_Carriers = 'United' \n        OR Top_Carriers LIKE 'United,%' \n        OR Top_Carriers LIKE '%, United' \n        OR Top_Carriers LIKE '%, United,%');\n```",
+    "execution_log": null,
+    "is_correct": true,
+    "gold_answer": "10",
+    "table_id": "nu-37",
+    "token_stats": null
+  }
+]

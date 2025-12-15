@@ -1,0 +1,66 @@
+# # Weaver Configuration
+
+# # Database settings
+# database:
+#   db_type: "sqlite"  # sqlite, mysql, postgresql
+#   db_name: "weaver.db"
+#   host: ""  # not needed for sqlite
+#   port: ""  # not needed for sqlite
+#   user: ""  # not needed for sqlite
+#   password: ""  # not needed for sqlite
+
+# # LLM settings
+# llm:
+#   model: "openai/qwen3-8b"  # 使用 openai 前缀
+#   api_base: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+#   temperature: 0.1
+#   max_tokens: 2048
+#   timeout: 60
+#   calc_usage: false
+#   api_key: "sk-1777dc9ca8564249a388c385d6a23e54"  # 使用qwen3-8b的API密钥
+
+# # Prompt settings
+# prompts:
+#   dir: "prompts/weaver"  # relative to project root
+#   default_dataset: "default"
+
+# # Data settings
+# data:
+#   max_table_rows: 1000
+#   filter_columns: true
+  
+# # Output settings
+# output:
+#   results_dir: "results"
+
+
+
+# Weaver Configuration
+
+# Database settings
+database:
+  type: "sqlite"  # 改为 type 而不是 db_type
+  path: "./weaver_data.sqlite"  # 改为 path 而不是 db_name
+  # 移除其他不必要的字段
+
+# LLM settings
+llm:
+  api_type: "openai"  # 明确指定为 openai
+  model: "qwen3-8b"   # 去掉 openai/ 前缀，让代码自动添加
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  api_key: "sk-1777dc9ca8564249a388c385d6a23e54"
+  temperature: 0.1
+  max_tokens: 2048
+  timeout: 60
+
+# Prompt settings
+prompts:
+  dir: "prompts/weaver"  # 确保目录存在
+
+# Data settings
+data:
+  max_table_rows: 1000
+  
+# Output settings
+output:
+  results_dir: "results"

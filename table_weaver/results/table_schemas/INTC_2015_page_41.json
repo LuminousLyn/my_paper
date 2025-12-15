@@ -1,0 +1,81 @@
+{
+  "file_path": "/tmp/tmp2ep_bdk2.csv",
+  "table_name": "tmp",
+  "table_description": "This table represents quantitative data measured in millions of square feet, categorized between the United States and other countries, with a total sum. It is likely used for comparing regional metrics or land area measurements.",
+  "number_of_rows": 3,
+  "column_list": [
+    "Square_Feet_in_Millions",
+    "UnitedStates",
+    "OtherCountries",
+    "Total"
+  ],
+  "cell_example": [
+    {
+      "Square_Feet_in_Millions": 1.0,
+      "UnitedStates": 30.7,
+      "OtherCountries": 17.2,
+      "Total": 47.9
+    },
+    {
+      "Square_Feet_in_Millions": 2.0,
+      "UnitedStates": 2.1,
+      "OtherCountries": 6.0,
+      "Total": 8.1
+    },
+    {
+      "Square_Feet_in_Millions": NaN,
+      "UnitedStates": 32.8,
+      "OtherCountries": 23.2,
+      "Total": 56.0
+    }
+  ],
+  "column_description": [
+    {
+      "column_name": "Square_Feet_in_Millions",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          1.0,
+          2.0
+        ]
+      },
+      "specific_meaning": "Quantitative measurement in millions of square feet, representing the primary metric being tracked."
+    },
+    {
+      "column_name": "UnitedStates",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          30.7,
+          2.1,
+          32.8
+        ]
+      },
+      "specific_meaning": "Amount of the primary metric in millions of square feet specifically attributed to the United States."
+    },
+    {
+      "column_name": "OtherCountries",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          17.2,
+          6.0,
+          23.2
+        ]
+      },
+      "specific_meaning": "Amount of the primary metric in millions of square feet attributed to countries outside the United States."
+    },
+    {
+      "column_name": "Total",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          47.9,
+          8.1,
+          56.0
+        ]
+      },
+      "specific_meaning": "Sum of UnitedStates and OtherCountries values, representing the overall total of the primary metric."
+    }
+  ]
+}

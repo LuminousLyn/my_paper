@@ -1,0 +1,629 @@
+{
+    "file_path": "/home/beihang/lilin/TableZoomer/data/databench_test/DataBench/test/066_IBM_HR/all.csv",
+    "table_name": "066_IBM_HR",
+    "table_description": "The IBM_HR table contains detailed information about employees, including personal details, job roles, performance metrics, and satisfaction levels. It is used for analyzing employee attrition, job satisfaction, and other HR-related insights.",
+    "number_of_rows": 1470,
+    "column_list": [
+        "Age",
+        "Attrition",
+        "BusinessTravel",
+        "DailyRate",
+        "Department",
+        "DistanceFromHome",
+        "Education",
+        "EducationField",
+        "EmployeeCount",
+        "EmployeeNumber",
+        "EnvironmentSatisfaction",
+        "Gender",
+        "HourlyRate",
+        "JobInvolvement",
+        "JobLevel",
+        "JobRole",
+        "JobSatisfaction",
+        "MaritalStatus",
+        "MonthlyIncome",
+        "MonthlyRate",
+        "NumCompaniesWorked",
+        "Over18",
+        "OverTime",
+        "PercentSalaryHike",
+        "PerformanceRating",
+        "RelationshipSatisfaction",
+        "StandardHours",
+        "StockOptionLevel",
+        "TotalWorkingYears",
+        "TrainingTimesLastYear",
+        "WorkLifeBalance",
+        "YearsAtCompany",
+        "YearsInCurrentRole",
+        "YearsSinceLastPromotion",
+        "YearsWithCurrManager"
+    ],
+    "cell_example": [
+        {
+            "Age": 40,
+            "Attrition": "No",
+            "BusinessTravel": "Travel_Rarely",
+            "DailyRate": 1137,
+            "Department": "Research & Development",
+            "DistanceFromHome": 1,
+            "Education": 4,
+            "EducationField": "Life Sciences",
+            "EmployeeCount": 1,
+            "EmployeeNumber": 1892,
+            "EnvironmentSatisfaction": 1,
+            "Gender": "Male",
+            "HourlyRate": 98,
+            "JobInvolvement": 3,
+            "JobLevel": 4,
+            "JobRole": "Manager",
+            "JobSatisfaction": 1,
+            "MaritalStatus": "Divorced",
+            "MonthlyIncome": 16823,
+            "MonthlyRate": 18991,
+            "NumCompaniesWorked": 2,
+            "Over18": "Y",
+            "OverTime": "No",
+            "PercentSalaryHike": 11,
+            "PerformanceRating": 3,
+            "RelationshipSatisfaction": 1,
+            "StandardHours": 80,
+            "StockOptionLevel": 1,
+            "TotalWorkingYears": 22,
+            "TrainingTimesLastYear": 3,
+            "WorkLifeBalance": 3,
+            "YearsAtCompany": 19,
+            "YearsInCurrentRole": 7,
+            "YearsSinceLastPromotion": 11,
+            "YearsWithCurrManager": 16
+        },
+        {
+            "Age": 34,
+            "Attrition": "No",
+            "BusinessTravel": "Travel_Frequently",
+            "DailyRate": 1069,
+            "Department": "Research & Development",
+            "DistanceFromHome": 2,
+            "Education": 1,
+            "EducationField": "Life Sciences",
+            "EmployeeCount": 1,
+            "EmployeeNumber": 256,
+            "EnvironmentSatisfaction": 4,
+            "Gender": "Male",
+            "HourlyRate": 45,
+            "JobInvolvement": 2,
+            "JobLevel": 2,
+            "JobRole": "Manufacturing Director",
+            "JobSatisfaction": 3,
+            "MaritalStatus": "Married",
+            "MonthlyIncome": 9547,
+            "MonthlyRate": 14074,
+            "NumCompaniesWorked": 1,
+            "Over18": "Y",
+            "OverTime": "No",
+            "PercentSalaryHike": 17,
+            "PerformanceRating": 3,
+            "RelationshipSatisfaction": 3,
+            "StandardHours": 80,
+            "StockOptionLevel": 0,
+            "TotalWorkingYears": 10,
+            "TrainingTimesLastYear": 2,
+            "WorkLifeBalance": 2,
+            "YearsAtCompany": 10,
+            "YearsInCurrentRole": 9,
+            "YearsSinceLastPromotion": 1,
+            "YearsWithCurrManager": 9
+        },
+        {
+            "Age": 38,
+            "Attrition": "No",
+            "BusinessTravel": "Non-Travel",
+            "DailyRate": 573,
+            "Department": "Research & Development",
+            "DistanceFromHome": 6,
+            "Education": 3,
+            "EducationField": "Medical",
+            "EmployeeCount": 1,
+            "EmployeeNumber": 107,
+            "EnvironmentSatisfaction": 2,
+            "Gender": "Female",
+            "HourlyRate": 79,
+            "JobInvolvement": 1,
+            "JobLevel": 2,
+            "JobRole": "Research Scientist",
+            "JobSatisfaction": 4,
+            "MaritalStatus": "Divorced",
+            "MonthlyIncome": 5329,
+            "MonthlyRate": 15717,
+            "NumCompaniesWorked": 7,
+            "Over18": "Y",
+            "OverTime": "Yes",
+            "PercentSalaryHike": 12,
+            "PerformanceRating": 3,
+            "RelationshipSatisfaction": 4,
+            "StandardHours": 80,
+            "StockOptionLevel": 3,
+            "TotalWorkingYears": 17,
+            "TrainingTimesLastYear": 3,
+            "WorkLifeBalance": 3,
+            "YearsAtCompany": 13,
+            "YearsInCurrentRole": 11,
+            "YearsSinceLastPromotion": 1,
+            "YearsWithCurrManager": 9
+        },
+        {
+            "Age": 40,
+            "Attrition": "No",
+            "BusinessTravel": "Non-Travel",
+            "DailyRate": 663,
+            "Department": "Research & Development",
+            "DistanceFromHome": 9,
+            "Education": 4,
+            "EducationField": "Other",
+            "EmployeeCount": 1,
+            "EmployeeNumber": 1449,
+            "EnvironmentSatisfaction": 3,
+            "Gender": "Male",
+            "HourlyRate": 81,
+            "JobInvolvement": 3,
+            "JobLevel": 2,
+            "JobRole": "Laboratory Technician",
+            "JobSatisfaction": 3,
+            "MaritalStatus": "Divorced",
+            "MonthlyIncome": 3975,
+            "MonthlyRate": 23099,
+            "NumCompaniesWorked": 3,
+            "Over18": "Y",
+            "OverTime": "No",
+            "PercentSalaryHike": 11,
+            "PerformanceRating": 3,
+            "RelationshipSatisfaction": 3,
+            "StandardHours": 80,
+            "StockOptionLevel": 2,
+            "TotalWorkingYears": 11,
+            "TrainingTimesLastYear": 2,
+            "WorkLifeBalance": 4,
+            "YearsAtCompany": 8,
+            "YearsInCurrentRole": 7,
+            "YearsSinceLastPromotion": 0,
+            "YearsWithCurrManager": 7
+        },
+        {
+            "Age": 45,
+            "Attrition": "No",
+            "BusinessTravel": "Travel_Rarely",
+            "DailyRate": 193,
+            "Department": "Research & Development",
+            "DistanceFromHome": 6,
+            "Education": 4,
+            "EducationField": "Other",
+            "EmployeeCount": 1,
+            "EmployeeNumber": 101,
+            "EnvironmentSatisfaction": 4,
+            "Gender": "Male",
+            "HourlyRate": 52,
+            "JobInvolvement": 3,
+            "JobLevel": 3,
+            "JobRole": "Research Director",
+            "JobSatisfaction": 1,
+            "MaritalStatus": "Married",
+            "MonthlyIncome": 13245,
+            "MonthlyRate": 15067,
+            "NumCompaniesWorked": 4,
+            "Over18": "Y",
+            "OverTime": "Yes",
+            "PercentSalaryHike": 14,
+            "PerformanceRating": 3,
+            "RelationshipSatisfaction": 2,
+            "StandardHours": 80,
+            "StockOptionLevel": 0,
+            "TotalWorkingYears": 17,
+            "TrainingTimesLastYear": 3,
+            "WorkLifeBalance": 4,
+            "YearsAtCompany": 0,
+            "YearsInCurrentRole": 0,
+            "YearsSinceLastPromotion": 0,
+            "YearsWithCurrManager": 0
+        }
+    ],
+    "column_description": [
+        {
+            "column_name": "Age",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 18,
+                "maximum_value": 60,
+                "median_value": 36.0,
+                "average_value": 36.923809523809524
+            },
+            "specific_meaning": "Employee's age in years."
+        },
+        {
+            "column_name": "Attrition",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "No",
+                    "Yes"
+                ]
+            },
+            "specific_meaning": "Indicates whether the employee has left the company (Yes/No)."
+        },
+        {
+            "column_name": "BusinessTravel",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "Travel_Rarely",
+                    "Travel_Frequently",
+                    "Non-Travel"
+                ]
+            },
+            "specific_meaning": "Frequency of business travel (Travel_Rarely, Travel_Frequently, Non-Travel)."
+        },
+        {
+            "column_name": "DailyRate",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 102,
+                "maximum_value": 1499,
+                "median_value": 802.0,
+                "average_value": 802.4857142857143
+            },
+            "specific_meaning": "Daily pay rate of the employee."
+        },
+        {
+            "column_name": "Department",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "Research & Development",
+                    "Sales",
+                    "Human Resources"
+                ]
+            },
+            "specific_meaning": "Department where the employee works (Research & Development, Sales, Human Resources)."
+        },
+        {
+            "column_name": "DistanceFromHome",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 29,
+                "median_value": 7.0,
+                "average_value": 9.19251700680272
+            },
+            "specific_meaning": "Distance in miles from the employee's home to workplace."
+        },
+        {
+            "column_name": "Education",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 5,
+                "median_value": 3.0,
+                "average_value": 2.912925170068027
+            },
+            "specific_meaning": "Highest educational degree attained (1-5)."
+        },
+        {
+            "column_name": "EducationField",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "Life Sciences",
+                    "Medical",
+                    "Marketing",
+                    "Technical Degree",
+                    "Other",
+                    "Human Resources"
+                ]
+            },
+            "specific_meaning": "Field of study (Life Sciences, Medical, Marketing, Technical Degree, Other, Human Resources) with 9 categories."
+        },
+        {
+            "column_name": "EmployeeCount",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 1,
+                "median_value": 1.0,
+                "average_value": 1.0
+            },
+            "specific_meaning": "Number of employees (always 1)."
+        },
+        {
+            "column_name": "EmployeeNumber",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 2068,
+                "median_value": 1020.5,
+                "average_value": 1024.865306122449
+            },
+            "specific_meaning": "Unique identifier for the employee."
+        },
+        {
+            "column_name": "EnvironmentSatisfaction",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 4,
+                "median_value": 3.0,
+                "average_value": 2.721768707482993
+            },
+            "specific_meaning": "Satisfaction level with the work environment (1-4)."
+        },
+        {
+            "column_name": "Gender",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "Male",
+                    "Female"
+                ]
+            },
+            "specific_meaning": "Employee's gender (Male, Female)."
+        },
+        {
+            "column_name": "HourlyRate",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 30,
+                "maximum_value": 100,
+                "median_value": 66.0,
+                "average_value": 65.89115646258503
+            },
+            "specific_meaning": "Hourly pay rate of the employee."
+        },
+        {
+            "column_name": "JobInvolvement",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 4,
+                "median_value": 3.0,
+                "average_value": 2.7299319727891156
+            },
+            "specific_meaning": "Level of involvement in work (1-4)."
+        },
+        {
+            "column_name": "JobLevel",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 5,
+                "median_value": 2.0,
+                "average_value": 2.0639455782312925
+            },
+            "specific_meaning": "Hierarchical level within the job role (1-5)."
+        },
+        {
+            "column_name": "JobRole",
+            "dtype": "object",
+            "example": {
+                "category_examples": [
+                    "Sales Executive",
+                    "Research Scientist",
+                    "Laboratory Technician",
+                    "Manufacturing Director",
+                    "Healthcare Representative",
+                    "Manager"
+                ],
+                "total_number_of_categories": 9,
+                "caption": "There are many types in this column, displaying the top 6 most common types"
+            },
+            "specific_meaning": "Employee's role (Sales Executive, Research Scientist, Laboratory Technician, etc.) with 9 categories."
+        },
+        {
+            "column_name": "JobSatisfaction",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 4,
+                "median_value": 3.0,
+                "average_value": 2.7285714285714286
+            },
+            "specific_meaning": "Satisfaction level with the job (1-4)."
+        },
+        {
+            "column_name": "MaritalStatus",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "Married",
+                    "Single",
+                    "Divorced"
+                ]
+            },
+            "specific_meaning": "Employee's marital status (Married, Single, Divorced)."
+        },
+        {
+            "column_name": "MonthlyIncome",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1009,
+                "maximum_value": 19999,
+                "median_value": 4919.0,
+                "average_value": 6502.931292517007
+            },
+            "specific_meaning": "Monthly income of the employee."
+        },
+        {
+            "column_name": "MonthlyRate",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 2094,
+                "maximum_value": 26999,
+                "median_value": 14235.5,
+                "average_value": 14313.103401360544
+            },
+            "specific_meaning": "Monthly salary rate of the employee."
+        },
+        {
+            "column_name": "NumCompaniesWorked",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 0,
+                "maximum_value": 9,
+                "median_value": 2.0,
+                "average_value": 2.6931972789115646
+            },
+            "specific_meaning": "Number of companies the employee has worked for previously."
+        },
+        {
+            "column_name": "Over18",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "Y"
+                ]
+            },
+            "specific_meaning": "Indicates if the employee is over 18 years old (Y)."
+        },
+        {
+            "column_name": "OverTime",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "No",
+                    "Yes"
+                ]
+            },
+            "specific_meaning": "Whether the employee works overtime (Yes/No)."
+        },
+        {
+            "column_name": "PercentSalaryHike",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 11,
+                "maximum_value": 25,
+                "median_value": 14.0,
+                "average_value": 15.209523809523809
+            },
+            "specific_meaning": "Percentage increase in salary from previous year."
+        },
+        {
+            "column_name": "PerformanceRating",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 3,
+                "maximum_value": 4,
+                "median_value": 3.0,
+                "average_value": 3.1537414965986397
+            },
+            "specific_meaning": "Performance rating of the employee (3-4)."
+        },
+        {
+            "column_name": "RelationshipSatisfaction",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 4,
+                "median_value": 3.0,
+                "average_value": 2.7122448979591836
+            },
+            "specific_meaning": "Satisfaction level with work relationships (1-4)."
+        },
+        {
+            "column_name": "StandardHours",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 80,
+                "maximum_value": 80,
+                "median_value": 80.0,
+                "average_value": 80.0
+            },
+            "specific_meaning": "Standard working hours per week (always 80)."
+        },
+        {
+            "column_name": "StockOptionLevel",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 0,
+                "maximum_value": 3,
+                "median_value": 1.0,
+                "average_value": 0.7938775510204081
+            },
+            "specific_meaning": "Level of stock options granted (0-3)."
+        },
+        {
+            "column_name": "TotalWorkingYears",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 0,
+                "maximum_value": 40,
+                "median_value": 10.0,
+                "average_value": 11.279591836734694
+            },
+            "specific_meaning": "Total years of work experience."
+        },
+        {
+            "column_name": "TrainingTimesLastYear",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 0,
+                "maximum_value": 6,
+                "median_value": 3.0,
+                "average_value": 2.7993197278911564
+            },
+            "specific_meaning": "Number of training sessions attended in the last year."
+        },
+        {
+            "column_name": "WorkLifeBalance",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 1,
+                "maximum_value": 4,
+                "median_value": 3.0,
+                "average_value": 2.7612244897959184
+            },
+            "specific_meaning": "Balance between work and personal life (1-4)."
+        },
+        {
+            "column_name": "YearsAtCompany",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 0,
+                "maximum_value": 40,
+                "median_value": 5.0,
+                "average_value": 7.0081632653061225
+            },
+            "specific_meaning": "Years the employee has been with the company."
+        },
+        {
+            "column_name": "YearsInCurrentRole",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 0,
+                "maximum_value": 18,
+                "median_value": 3.0,
+                "average_value": 4.229251700680272
+            },
+            "specific_meaning": "Years in the current job role."
+        },
+        {
+            "column_name": "YearsSinceLastPromotion",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 0,
+                "maximum_value": 15,
+                "median_value": 1.0,
+                "average_value": 2.1877551020408164
+            },
+            "specific_meaning": "Years since the last promotion."
+        },
+        {
+            "column_name": "YearsWithCurrManager",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 0,
+                "maximum_value": 17,
+                "median_value": 3.0,
+                "average_value": 4.12312925170068
+            },
+            "specific_meaning": "Years working under the current manager."
+        }
+    ]
+}

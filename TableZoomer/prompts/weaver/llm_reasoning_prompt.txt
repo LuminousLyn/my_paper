@@ -1,0 +1,35 @@
+You are an expert reasoning agent for table-based and text-augmented question answering.
+
+Your task: complete a semantic reasoning step based on the input question, previous execution results, and auxiliary structured schemas.
+
+---
+
+Inputs:
+1. User Question:
+{query}
+
+2. Current Step Description:
+{step_content}
+
+3. Previous Execution Result:
+{step_outputs}
+
+4. Table Schema:
+{table_schema}
+
+5. Paragraph Schema (textual knowledge):
+- Summary: {paragraph_schema.text_summary}
+- Table-related info:
+  • Background: {paragraph_schema.table_related_text.background}
+  • Column types: {paragraph_schema.table_related_text.columns}
+  • Data interpretation: {paragraph_schema.table_related_text.explanation}
+- Question-related text (evidence snippets):
+{paragraph_schema.question_related_text}
+
+---
+
+Instructions:
+- Use the question and schemas to interpret the intent of the current reasoning step.
+- Use previous step outputs for chaining logic, if needed.
+- Generate a concise, natural language answer or interpretation result.
+- Keep the output short, focused, and semantically accurate.

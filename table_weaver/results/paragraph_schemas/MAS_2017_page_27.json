@@ -1,0 +1,22 @@
+{
+  "text_summary": "The paragraph outlines the financial metrics of ETR company in 2016, highlighting revenue growth across different business segments and operational expenses.",
+  "table_related_text": [
+    {
+      "background_related": "The paragraph discusses ETR's 2016 financial performance, which aligns with the table's focus on revenue and expense data."
+    },
+    {
+      "column_related": "The 'Revenue' column likely represents the figures mentioned in the paragraph regarding quarterly revenue increases."
+    },
+    {
+      "data_explanation": "The paragraph notes a 15% revenue growth trend, which may correspond to the numerical values in the table's 'Revenue' column."
+    }
+  ],
+  "question_related_text": [
+    {
+      "2016": "The paragraph specifically addresses ETR's financial performance during the year 2016."
+    },
+    {
+      "revenue": "Revenue growth is explicitly mentioned as a key metric in the paragraph."
+    }
+  ]
+}

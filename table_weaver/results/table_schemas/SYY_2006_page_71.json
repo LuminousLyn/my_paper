@@ -1,0 +1,66 @@
+{
+  "file_path": "/tmp/tmpxlnx820b.csv",
+  "table_name": "tmp",
+  "table_description": "This table appears to track financial or metric data over time, with one column representing temporal markers and the other representing measured values. The data may relate to annual figures, quarterly reports, or time-series analysis.",
+  "number_of_rows": 6,
+  "column_list": [
+    "Unnamed_0",
+    "Amount"
+  ],
+  "cell_example": [
+    {
+      "Unnamed_0": 2007.0,
+      "Amount": 56499000.0
+    },
+    {
+      "Unnamed_0": 2008.0,
+      "Amount": 46899000.0
+    },
+    {
+      "Unnamed_0": 2009.0,
+      "Amount": 39904000.0
+    },
+    {
+      "Unnamed_0": 2010.0,
+      "Amount": 33329000.0
+    },
+    {
+      "Unnamed_0": 2011.0,
+      "Amount": 25666000.0
+    },
+    {
+      "Unnamed_0": NaN,
+      "Amount": 128981000.0
+    }
+  ],
+  "column_description": [
+    {
+      "column_name": "Unnamed_0",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          2007.0,
+          2008.0,
+          2009.0,
+          2010.0,
+          2011.0
+        ]
+      },
+      "specific_meaning": "Temporal marker representing years, stored as floating-point numbers (e.g., 2007.0, 2008.0). Likely serves as a time dimension for time-series analysis."
+    },
+    {
+      "column_name": "Amount",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          46899000.0,
+          25666000.0,
+          128981000.0,
+          33329000.0,
+          39904000.0
+        ]
+      },
+      "specific_meaning": "Quantitative metric value, possibly representing financial figures (e.g., revenue, expenditure) in numerical form with decimal precision."
+    }
+  ]
+}

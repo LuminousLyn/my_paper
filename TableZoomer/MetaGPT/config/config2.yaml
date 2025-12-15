@@ -1,0 +1,28 @@
+# Full Example: https://github.com/geekan/MetaGPT/blob/main/config/config2.example.yaml
+# Reflected Code: https://github.com/geekan/MetaGPT/blob/main/metagpt/config2.py
+# Config Docs: https://docs.deepwisdom.ai/main/en/guide/get_started/configuration.html
+# llm:
+#   api_type: open_llm
+#   base_url: "http://{ip}:{port}/v1"
+#   model: "{model}"        # keep the same with the served-model-name parameter in the vllm startup service script
+#   temperature: 0
+#   calc_usage: false
+#   api_key: "{api_key}"
+
+# local
+# llm:
+#   api_type: open_llm
+#   base_url: "http://127.0.0.1:8000/v1"
+#   model: "qwen3-8b"
+#   temperature: 0
+#   calc_usage: false
+#   api_key: ""  # 如果本地服务不需要验证，可以为空
+
+# cloud
+llm:
+  api_type: open_llm
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  model: "qwen3-8b"
+  temperature: 0
+  calc_usage: false
+  api_key: "sk-1777dc9ca8564249a388c385d6a23e54"

@@ -1,0 +1,22 @@
+{
+  "text_summary": "The paragraph discusses the financial performance of ETR company in 2016, highlighting revenue growth across different business segments and noting strategic initiatives that contributed to this growth.",
+  "table_related_text": [
+    {
+      "background_related": "The paragraph provides context about ETR's 2016 financial performance, which aligns with the table's focus on revenue and business segment data."
+    },
+    {
+      "column_related": "The 'Business Segment' column in the table likely corresponds to the segments mentioned in the paragraph, such as manufacturing and services."
+    },
+    {
+      "data_explanation": "The paragraph mentions revenue growth trends that are likely reflected in the table's numerical values for each quarter."
+    }
+  ],
+  "question_related_text": [
+    {
+      "2016": "The paragraph specifically focuses on ETR's performance during the year 2016."
+    },
+    {
+      "revenue": "Revenue growth is explicitly discussed as a key metric in the paragraph."
+    }
+  ]
+}

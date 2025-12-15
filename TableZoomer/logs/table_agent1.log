@@ -1,0 +1,829 @@
+2025-12-12 17:11:15,449 - INFO - 初始化Weaver框架...
+2025-12-12 17:11:15,458 - INFO - Weaver框架初始化完成
+2025-12-12 17:11:15,464 - INFO - Weaver执行器初始化完成
+2025-12-12 17:11:15,468 - INFO - Query: what is the net change in net revenue during 2015 for entergy corporation?
+2025-12-12 17:11:15,468 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ETR_2016_page_23.csv
+2025-12-12 17:11:15,468 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 17:11:15,470 - INFO - 成功加载表格数据，共 8 行，列数: 2
+2025-12-12 17:11:15,470 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount (In Millions)']
+2025-12-12 17:11:15,470 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 17:11:15,475 - INFO - 表格清洗完成，新表名: ETR_2016_page_23
+2025-12-12 17:11:15,475 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount_In_Millions']
+2025-12-12 17:11:15,475 - INFO - 清洗后表格大小: (8, 2)
+2025-12-12 17:11:15,475 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ETR_2016_page_23
+2025-12-12 17:11:15,476 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp2__8lbl4.csv
+2025-12-12 17:11:15,476 - INFO - 0. Generate table description.
+2025-12-12 17:11:15,476 - INFO - Get table schema...
+2025-12-12 17:11:15,476 - INFO - ** Step0: Table Schema Generation.
+2025-12-12 17:11:26,081 - INFO - table_desc:
+ Table Describer: {"file_path": "/tmp/tmp2__8lbl4.csv", "table_name": "tmp", "table_description": "This table records financial items along with their corresponding monetary values in millions of dollars, likely used for budgeting, financial reporting, or accounting purposes.", "number_of_rows": 8, "column_list": ["Unnamed_0", "Amount_In_Millions"], "cell_example": [{"Unnamed_0": "2014 net revenue", "Amount_In_Millions": 5735.0}, {"Unnamed_0": "Retail electric price", "Amount_In_Millions": 187.0}, {"Unnamed_0": "Volume/weather", "Amount_In_Millions": 95.0}, {"Unnamed_0": "Waterford 3 replacement steam generator provision", "Amount_In_Millions": 32.0}, {"Unnamed_0": "MISO deferral", "Amount_In_Millions": 35.0}, {"Unnamed_0": "Louisiana business combination customer credits", "Amount_In_Millions": 107.0}, {"Unnamed_0": "Other", "Amount_In_Millions": 14.0}, {"Unnamed_0": "2015 net revenue", "Amount_In_Millions": 5829.0}], "column_description": [{"column_name": "Unnamed_0", "dtype": "object", "example": {"category_examples": ["2014 net revenue", "Retail electric price", "Louisiana business combination customer credits", "Waterford 3 replacement steam generator provision", "MISO deferral"]}, "specific_meaning": "Describes the financial item or account category, with examples such as '2014 net revenue' and 'Retail electric price'"}, {"column_name": "Amount_In_Millions", "dtype": "float64", "example": {"category_examples": [95.0, 5735.0, 5829.0, 107.0, 14.0]}, "specific_meaning": "Quantifies the financial value associated with each entry, measured in millions of dollars"}], "paragraph_schema": {"table_name": "tmp", "paragraphs": [{"column": "Unnamed_0", "description": "Column Unnamed_0 contains data about Unnamed_0."}, {"column": "Amount_In_Millions", "description": "Column Amount_In_Millions contains data about Amount_In_Millions."}]}}
+2025-12-12 17:11:26,085 - INFO - Generating paragraph schema...
+2025-12-12 17:11:26,085 - INFO - Input paragraphs: entergy corporation and subsidiaries management 2019s financial discussion and analysis a result of the entergy louisiana and entergy gulf states louisiana business combination , results of operations for 2015 also include two items that occurred in october 2015 : 1 ) a deferred tax asset and resulting net increase in tax basis of approximately $ 334 million and 2 ) a regulatory liability of $ 107 million ( $ 66 million net-of-tax ) as a result of customer credits to be realized by electric customers of entergy louisiana , consistent with the terms of the stipulated settlement in the business combination proceeding . see note 2 to the financial statements for further discussion of the business combination and customer credits . results of operations for 2015 also include the sale in december 2015 of the 583 mw rhode island state energy center for a realized gain of $ 154 million ( $ 100 million net-of-tax ) on the sale and the $ 77 million ( $ 47 million net-of-tax ) write-off and regulatory charges to recognize that a portion of the assets associated with the waterford 3 replacement steam generator project is no longer probable of recovery . see note 14 to the financial statements for further discussion of the rhode island state energy center sale . see note 2 to the financial statements for further discussion of the waterford 3 write-off . results of operations for 2014 include $ 154 million ( $ 100 million net-of-tax ) of charges related to vermont yankee primarily resulting from the effects of an updated decommissioning cost study completed in the third quarter 2014 along with reassessment of the assumptions regarding the timing of decommissioning cash flows and severance and employee retention costs . see note 14 to the financial statements for further discussion of the charges . results of operations for 2014 also include the $ 56.2 million ( $ 36.7 million net-of-tax ) write-off in 2014 of entergy mississippi 2019s regulatory asset associated with new nuclear generation development costs as a result of a joint stipulation entered into with the mississippi public utilities staff , subsequently approved by the mpsc , in which entergy mississippi agreed not to pursue recovery of the costs deferred by an mpsc order in the new nuclear generation docket . see note 2 to the financial statements for further discussion of the new nuclear generation development costs and the joint stipulation . net revenue utility following is an analysis of the change in net revenue comparing 2015 to 2014 . amount ( in millions ) . the retail electric price variance is primarily due to : 2022 formula rate plan increases at entergy louisiana , as approved by the lpsc , effective december 2014 and january 2015 ; 2022 an increase in energy efficiency rider revenue primarily due to increases in the energy efficiency rider at entergy arkansas , as approved by the apsc , effective july 2015 and july 2014 , and new energy efficiency riders at entergy louisiana and entergy mississippi that began in the fourth quarter 2014 ; and 2022 an annual net rate increase at entergy mississippi of $ 16 million , effective february 2015 , as a result of the mpsc order in the june 2014 rate case . see note 2 to the financial statements for a discussion of rate and regulatory proceedings.
+2025-12-12 17:11:26,085 - INFO - Input question: what is the net change in net revenue during 2015 for entergy corporation?
+2025-12-12 17:11:26,087 - INFO - Created LLM config from Weaver: {'llm': {'api_type': 'openai', 'model': 'openai/qwen3-8b', 'temperature': 0.1, 'max_tokens': 2048, 'timeout': 60, 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'api_key': 'sk-1777dc9ca8564249a388c385d6a23e54'}}
+2025-12-12 17:11:44,968 - INFO - Paragraph schema raw response: {"text_summary": "This paragraph discusses the financial performance of ETR company in 2016, including revenue growth and key business segments.", "table_related_text": [{"background_related": "The paragraph provides context about ETR's 2016 financial performance, which is likely the basis for the table data."}, {"column_related": "The 'Revenue' column in the table likely corresponds to the revenue figures mentioned in the paragraph."}, {"data_explanation": "The paragraph mentions growth trends that might be reflected in the table's numerical values."}], "question_related_text": [{"2016": "The paragraph focuses on ETR's performance specifically in 2016."}, {"revenue": "Revenue growth is a key metric discussed in the paragraph."}]}
+2025-12-12 17:11:44,968 - INFO - Final paragraph schema: {'text_summary': 'This paragraph discusses the financial performance of ETR company in 2016, including revenue growth and key business segments.', 'table_related_text': [{'background_related': "The paragraph provides context about ETR's 2016 financial performance, which is likely the basis for the table data."}, {'column_related': "The 'Revenue' column in the table likely corresponds to the revenue figures mentioned in the paragraph."}, {'data_explanation': "The paragraph mentions growth trends that might be reflected in the table's numerical values."}], 'question_related_text': [{'2016': "The paragraph focuses on ETR's performance specifically in 2016."}, {'revenue': 'Revenue growth is a key metric discussed in the paragraph.'}]}
+2025-12-12 17:11:44,968 - INFO - Saved paragraph schema to /home/lilin/table_weaver/results/paragraph_schemas/ETR_2016_page_23.json
+2025-12-12 17:11:44,968 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 17:11:44,968 - INFO - 1.1 Query Planning...
+2025-12-12 17:12:00,523 - INFO - 1.2 Table schema refinement...
+2025-12-12 17:12:00,526 - INFO - Refined table schema generated successfully
+2025-12-12 17:12:00,526 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 17:12:10,520 - INFO - *** Final Answer (elapsed time: 55.05 s) ***
+2025-12-12 17:12:10,523 - INFO - 94.0
+2025-12-12 17:12:10,523 - INFO - **********
+2025-12-12 17:12:10,523 - INFO - Query: what percentage of total facilities as measured in square feet are leased?
+2025-12-12 17:12:10,523 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/INTC_2015_page_41.csv
+2025-12-12 17:12:10,523 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 17:12:10,525 - INFO - 成功加载表格数据，共 3 行，列数: 4
+2025-12-12 17:12:10,525 - INFO - 原始表格列名: ['(Square Feet in Millions)', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 17:12:10,525 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 17:12:10,526 - INFO - 表格清洗完成，新表名: INTC_2015_page_41
+2025-12-12 17:12:10,526 - INFO - 清洗后表格列名: ['Square_Feet_in_Millions', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 17:12:10,526 - INFO - 清洗后表格大小: (3, 4)
+2025-12-12 17:12:10,526 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: INTC_2015_page_41
+2025-12-12 17:12:10,527 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp2ep_bdk2.csv
+2025-12-12 17:12:10,527 - INFO - 0. Generate table description.
+2025-12-12 17:12:10,527 - INFO - Get table schema...
+2025-12-12 17:12:10,527 - INFO - ** Step0: Table Schema Generation.
+2025-12-12 17:12:22,959 - INFO - table_desc:
+ Table Describer: {"file_path": "/tmp/tmp2ep_bdk2.csv", "table_name": "tmp", "table_description": "This table represents quantitative data measured in millions of square feet, categorized between the United States and other countries, with a total sum. It is likely used for comparing regional metrics or land area measurements.", "number_of_rows": 3, "column_list": ["Square_Feet_in_Millions", "UnitedStates", "OtherCountries", "Total"], "cell_example": [{"Square_Feet_in_Millions": 1.0, "UnitedStates": 30.7, "OtherCountries": 17.2, "Total": 47.9}, {"Square_Feet_in_Millions": 2.0, "UnitedStates": 2.1, "OtherCountries": 6.0, "Total": 8.1}, {"Square_Feet_in_Millions": NaN, "UnitedStates": 32.8, "OtherCountries": 23.2, "Total": 56.0}], "column_description": [{"column_name": "Square_Feet_in_Millions", "dtype": "float64", "example": {"category_examples": [1.0, 2.0]}, "specific_meaning": "Quantitative measurement in millions of square feet, representing the primary metric being tracked."}, {"column_name": "UnitedStates", "dtype": "float64", "example": {"category_examples": [30.7, 2.1, 32.8]}, "specific_meaning": "Amount of the primary metric in millions of square feet specifically attributed to the United States."}, {"column_name": "OtherCountries", "dtype": "float64", "example": {"category_examples": [17.2, 6.0, 23.2]}, "specific_meaning": "Amount of the primary metric in millions of square feet attributed to countries outside the United States."}, {"column_name": "Total", "dtype": "float64", "example": {"category_examples": [47.9, 8.1, 56.0]}, "specific_meaning": "Sum of UnitedStates and OtherCountries values, representing the overall total of the primary metric."}], "paragraph_schema": {"table_name": "tmp", "paragraphs": [{"column": "Square_Feet_in_Millions", "description": "Column Square_Feet_in_Millions contains data about Square_Feet_in_Millions."}, {"column": "UnitedStates", "description": "Column UnitedStates contains data about UnitedStates."}, {"column": "OtherCountries", "description": "Column OtherCountries contains data about OtherCountries."}, {"column": "Total", "description": "Column Total contains data about Total."}]}}
+2025-12-12 17:12:22,962 - INFO - Generating paragraph schema...
+2025-12-12 17:12:22,962 - INFO - Input paragraphs: item 1b . unresolved staff comments not applicable . item 2 . properties as of december 26 , 2015 , our major facilities consisted of : ( square feet in millions ) united states countries total owned facilities1     30.7 17.2 47.9 leased facilities2     2.1 6.0 8.1 . 1 leases on portions of the land used for these facilities expire on varying dates through 2062 . 2 leases expire on varying dates through 2030 and generally include renewals at our option . our principal executive offices are located in the u.s . and a majority of our wafer fabrication activities are also located in the u.s . we completed construction of development fabrication facilities in oregon during 2014 that we expect will enable us to maintain our process technology lead . we also completed construction of a large-scale fabrication building in arizona in 2013 . a portion of the new oregon and arizona facilities are currently not in use and we are reserving the new buildings for additional capacity and future technologies . incremental construction and equipment installation are required to ready the facilities for their intended use . our massachusetts fabrication facility was our last manufacturing facility on 200mm wafers and ceased production in q1 2015 . outside the u.s. , we have wafer fabrication facilities in ireland , israel , and china . our fabrication facility in ireland has transitioned to our 14nm process technology , with manufacturing continuing to ramp in 2016 . additionally , in the second half of 2016 , we will start using our facility in dalian , china to help expand our manufacturing capacity in next-generation memory . our assembly and test facilities are located in malaysia , china , and vietnam . in addition , we have sales and marketing offices worldwide that are generally located near major concentrations of customers . we believe that the facilities described above are suitable and adequate for our present purposes and that the productive capacity in our facilities is substantially being utilized or we have plans to utilize it . we do not identify or allocate assets by operating segment . for information on net property , plant and equipment by country , see 201cnote 26 : operating segments and geographic information 201d in part ii , item 8 of this form 10-k . item 3 . legal proceedings for a discussion of legal proceedings , see 201cnote 25 : contingencies 201d in part ii , item 8 of this form 10-k . item 4 . mine safety disclosures not applicable 
+2025-12-12 17:12:22,962 - INFO - Input question: what percentage of total facilities as measured in square feet are leased?
+2025-12-12 17:12:22,964 - INFO - Created LLM config from Weaver: {'llm': {'api_type': 'openai', 'model': 'openai/qwen3-8b', 'temperature': 0.1, 'max_tokens': 2048, 'timeout': 60, 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'api_key': 'sk-1777dc9ca8564249a388c385d6a23e54'}}
+2025-12-12 17:12:45,246 - INFO - Paragraph schema raw response: {"text_summary": "The paragraph discusses the financial performance of ETR company in 2016, highlighting revenue growth across different business segments and noting strategic initiatives that contributed to this growth.", "table_related_text": [{"background_related": "The paragraph provides context about ETR's 2016 financial performance, which aligns with the table's focus on revenue and business segment data."}, {"column_related": "The 'Business Segment' column in the table likely corresponds to the segments mentioned in the paragraph, such as manufacturing and services."}, {"data_explanation": "The paragraph mentions revenue growth trends that are likely reflected in the table's numerical values for each quarter."}], "question_related_text": [{"2016": "The paragraph specifically focuses on ETR's performance during the year 2016."}, {"revenue": "Revenue growth is explicitly discussed as a key metric in the paragraph."}]}
+2025-12-12 17:12:45,247 - INFO - Final paragraph schema: {'text_summary': 'The paragraph discusses the financial performance of ETR company in 2016, highlighting revenue growth across different business segments and noting strategic initiatives that contributed to this growth.', 'table_related_text': [{'background_related': "The paragraph provides context about ETR's 2016 financial performance, which aligns with the table's focus on revenue and business segment data."}, {'column_related': "The 'Business Segment' column in the table likely corresponds to the segments mentioned in the paragraph, such as manufacturing and services."}, {'data_explanation': "The paragraph mentions revenue growth trends that are likely reflected in the table's numerical values for each quarter."}], 'question_related_text': [{'2016': "The paragraph specifically focuses on ETR's performance during the year 2016."}, {'revenue': 'Revenue growth is explicitly discussed as a key metric in the paragraph.'}]}
+2025-12-12 17:12:45,247 - INFO - Saved paragraph schema to /home/lilin/table_weaver/results/paragraph_schemas/INTC_2015_page_41.json
+2025-12-12 17:12:45,247 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 17:12:45,247 - INFO - 1.1 Query Planning...
+2025-12-12 17:13:08,838 - INFO - 1.2 Table schema refinement...
+2025-12-12 17:13:08,839 - INFO - cell example not found
+2025-12-12 17:13:08,840 - INFO - Refined table schema generated successfully
+2025-12-12 17:13:08,840 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 17:13:25,127 - INFO - *** Final Answer (elapsed time: 74.6 s) ***
+2025-12-12 17:13:25,129 - INFO - The table does not provide the necessary data to determine the percentage of total facilities that are leased.
+2025-12-12 17:13:25,129 - INFO - **********
+2025-12-12 17:13:25,129 - INFO - Query: what is the percentage change in cash flow hedges in 2011 compare to the 2010?
+2025-12-12 17:13:25,129 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ADI_2011_page_61.csv
+2025-12-12 17:13:25,129 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 17:13:25,131 - INFO - 成功加载表格数据，共 2 行，列数: 3
+2025-12-12 17:13:25,131 - INFO - 原始表格列名: ['Statement of Income', 'October 29, 2011', 'October 30, 2010']
+2025-12-12 17:13:25,131 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 17:13:25,134 - INFO - 表格清洗完成，新表名: ADI_2011_page_61
+2025-12-12 17:13:25,134 - INFO - 清洗后表格列名: ['Statement_of_Income', 'October_29_2011', 'October_30_2010']
+2025-12-12 17:13:25,134 - INFO - 清洗后表格大小: (2, 3)
+2025-12-12 17:13:25,134 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ADI_2011_page_61
+2025-12-12 17:13:25,135 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp_qybx0ye.csv
+2025-12-12 17:13:25,135 - INFO - 0. Generate table description.
+2025-12-12 17:13:25,135 - INFO - Get table schema...
+2025-12-12 17:13:25,135 - INFO - ** Step0: Table Schema Generation.
+2025-12-12 17:13:38,114 - INFO - table_desc:
+ Table Describer: {"file_path": "/tmp/tmp_qybx0ye.csv", "table_name": "tmp", "table_description": "This table contains financial data related to specific dates, including income statement items and their corresponding values. It is likely used for tracking financial transactions or reporting periods.", "number_of_rows": 2, "column_list": ["Statement_of_Income", "October_29_2011", "October_30_2010"], "cell_example": [{"Statement_of_Income": "Gain on Swaps", "October_29_2011": "Loss on Note", "October_30_2010": "Net Income Effect"}, {"Statement_of_Income": "$20,692", "October_29_2011": "$(20,692)", "October_30_2010": "$—"}], "column_description": [{"column_name": "Statement_of_Income", "dtype": "object", "example": {"category_examples": ["Gain on Swaps", "$20,692"]}, "specific_meaning": "Financial statement line item category, representing types of income or expenses such as 'Gain on Swaps' or 'Net Income Effect'"}, {"column_name": "October_29_2011", "dtype": "object", "example": {"category_examples": ["Loss on Note", "$(20,692)"]}, "specific_meaning": "Financial value recorded on October 29, 2011, containing entries like 'Loss on Note' or monetary amounts such as '$(20,692)'"}, {"column_name": "October_30_2010", "dtype": "object", "example": {"category_examples": ["Net Income Effect", "$—"]}, "specific_meaning": "Financial value recorded on October 30, 2010, including entries like 'Net Income Effect' or placeholder symbols such as '$—'"}], "paragraph_schema": {"table_name": "tmp", "paragraphs": [{"column": "Statement_of_Income", "description": "Column Statement_of_Income contains data about Statement_of_Income."}, {"column": "October_29_2011", "description": "Column October_29_2011 contains data about October_29_2011."}, {"column": "October_30_2010", "description": "Column October_30_2010 contains data about October_30_2010."}]}}
+2025-12-12 17:13:38,116 - INFO - Generating paragraph schema...
+2025-12-12 17:13:38,116 - INFO - Input paragraphs: undesignated hedges was $ 41.2 million and $ 42.1 million , respectively . the fair value of these hedging instruments in the company 2019s consolidated balance sheets as of october 29 , 2011 and october 30 , 2010 was immaterial . interest rate exposure management 2014 on june 30 , 2009 , the company entered into interest rate swap transactions related to its outstanding 5.0% ( 5.0 % ) senior unsecured notes where the company swapped the notional amount of its $ 375 million of fixed rate debt at 5.0% ( 5.0 % ) into floating interest rate debt through july 1 , 2014 . under the terms of the swaps , the company will ( i ) receive on the $ 375 million notional amount a 5.0% ( 5.0 % ) annual interest payment that is paid in two installments on the 1st of every january and july , commencing january 1 , 2010 through and ending on the maturity date ; and ( ii ) pay on the $ 375 million notional amount an annual three month libor plus 2.05% ( 2.05 % ) ( 2.42% ( 2.42 % ) as of october 29 , 2011 ) interest payment , payable in four installments on the 1st of every january , april , july and october , commencing on october 1 , 2009 and ending on the maturity date . the libor- based rate is set quarterly three months prior to the date of the interest payment . the company designated these swaps as fair value hedges . the fair value of the swaps at inception was zero and subsequent changes in the fair value of the interest rate swaps were reflected in the carrying value of the interest rate swaps on the balance sheet . the carrying value of the debt on the balance sheet was adjusted by an equal and offsetting amount . the gain or loss on the hedged item ( that is , the fixed-rate borrowings ) attributable to the hedged benchmark interest rate risk and the offsetting gain or loss on the related interest rate swaps for fiscal year 2011 and fiscal year 2010 were as follows : statement of income . the amounts earned and owed under the swap agreements are accrued each period and are reported in interest expense . there was no ineffectiveness recognized in any of the periods presented . the market risk associated with the company 2019s derivative instruments results from currency exchange rate or interest rate movements that are expected to offset the market risk of the underlying transactions , assets and liabilities being hedged . the counterparties to the agreements relating to the company 2019s derivative instruments consist of a number of major international financial institutions with high credit ratings . based on the credit ratings of our counterparties as of october 29 , 2011 , we do not believe that there is significant risk of nonperformance by them . furthermore , none of the company 2019s derivative transactions are subject to collateral or other security arrangements and none contain provisions that are dependent on the company 2019s credit ratings from any credit rating agency . while the contract or notional amounts of derivative financial instruments provide one measure of the volume of these transactions , they do not represent the amount of the company 2019s exposure to credit risk . the amounts potentially subject to credit risk ( arising from the possible inability of counterparties to meet the terms of their contracts ) are generally limited to the amounts , if any , by which the counterparties 2019 obligations under the contracts exceed the obligations of the company to the counterparties . as a result of the above considerations , the company does not consider the risk of counterparty default to be significant . the company records the fair value of its derivative financial instruments in the consolidated financial statements in other current assets , other assets or accrued liabilities , depending on their net position , regardless of the purpose or intent for holding the derivative contract . changes in the fair value of the derivative financial instruments are either recognized periodically in earnings or in shareholders 2019 equity as a component of oci . changes in the fair value of cash flow hedges are recorded in oci and reclassified into earnings when the underlying contract matures . changes in the fair values of derivatives not qualifying for hedge accounting are reported in earnings as they occur . the total notional amounts of derivative instruments designated as hedging instruments as of october 29 , 2011 and october 30 , 2010 were $ 375 million of interest rate swap agreements accounted for as fair value hedges and $ 153.7 million and $ 139.9 million , respectively , of cash flow hedges denominated in euros , british pounds and analog devices , inc . notes to consolidated financial statements 2014 ( continued ) .
+2025-12-12 17:13:38,116 - INFO - Input question: what is the percentage change in cash flow hedges in 2011 compare to the 2010?
+2025-12-12 17:13:38,118 - INFO - Created LLM config from Weaver: {'llm': {'api_type': 'openai', 'model': 'openai/qwen3-8b', 'temperature': 0.1, 'max_tokens': 2048, 'timeout': 60, 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'api_key': 'sk-1777dc9ca8564249a388c385d6a23e54'}}
+2025-12-12 17:14:01,940 - INFO - Paragraph schema raw response: {"text_summary": "The paragraph discusses TechCorp's 15% increase in quarterly sales in 2023, driven by a 20% growth in the North American region, with the table detailing sales figures by region and quarter.", "table_related_text": [{"background_related": "The paragraph provides context about TechCorp's 2023 sales growth, which is likely the source of the table's regional and quarterly sales data."}, {"column_related": "The 'Region' column corresponds to regions like 'North American' mentioned in the paragraph, while 'Sales' aligns with the numerical growth figures described."}, {"data_explanation": "The paragraph highlights a 20% sales increase in the North American region, suggesting this region's data may show higher values in the table compared to others."}], "question_related_text": [{"North American region": "The paragraph explicitly states the North American region saw a 20% rise in sales, directly linking to the question's focus."}, {"first quarter of 2023": "The paragraph references quarterly sales increases in 2023, implying the table includes data for specific quarters like the first quarter."}]}
+2025-12-12 17:14:01,941 - INFO - Final paragraph schema: {'text_summary': "The paragraph discusses TechCorp's 15% increase in quarterly sales in 2023, driven by a 20% growth in the North American region, with the table detailing sales figures by region and quarter.", 'table_related_text': [{'background_related': "The paragraph provides context about TechCorp's 2023 sales growth, which is likely the source of the table's regional and quarterly sales data."}, {'column_related': "The 'Region' column corresponds to regions like 'North American' mentioned in the paragraph, while 'Sales' aligns with the numerical growth figures described."}, {'data_explanation': "The paragraph highlights a 20% sales increase in the North American region, suggesting this region's data may show higher values in the table compared to others."}], 'question_related_text': [{'North American region': "The paragraph explicitly states the North American region saw a 20% rise in sales, directly linking to the question's focus."}, {'first quarter of 2023': 'The paragraph references quarterly sales increases in 2023, implying the table includes data for specific quarters like the first quarter.'}]}
+2025-12-12 17:14:01,941 - INFO - Saved paragraph schema to /home/lilin/table_weaver/results/paragraph_schemas/ADI_2011_page_61.json
+2025-12-12 17:14:01,941 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 17:14:01,941 - INFO - 1.1 Query Planning...
+2025-12-12 17:14:37,483 - INFO - 1.2 Table schema refinement...
+2025-12-12 17:14:37,489 - INFO - Refined table schema generated successfully
+2025-12-12 17:14:37,490 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 17:15:04,574 - INFO - *** Final Answer (elapsed time: 99.45 s) ***
+2025-12-12 17:15:04,576 - INFO - No valid percentage change can be determined
+2025-12-12 17:15:04,576 - INFO - **********
+2025-12-12 17:15:04,577 - INFO - Query: what portion of total purchase price is related to stock awards?
+2025-12-12 17:15:04,577 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/FIS_2010_page_70.csv
+2025-12-12 17:15:04,577 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 17:15:04,578 - INFO - 成功加载表格数据，共 2 行，列数: 2
+2025-12-12 17:15:04,578 - INFO - 原始表格列名: ['Value of Metavante common stock', '$4,066.4']
+2025-12-12 17:15:04,578 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 17:15:04,580 - INFO - 表格清洗完成，新表名: FIS_2010_page_70
+2025-12-12 17:15:04,580 - INFO - 清洗后表格列名: ['Value_of_Metavante_common_stock', '40664']
+2025-12-12 17:15:04,580 - INFO - 清洗后表格大小: (2, 2)
+2025-12-12 17:15:04,580 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: FIS_2010_page_70
+2025-12-12 17:15:04,580 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpp_dm0j7l.csv
+2025-12-12 17:15:04,580 - INFO - 0. Generate table description.
+2025-12-12 17:15:04,580 - INFO - Get table schema...
+2025-12-12 17:15:04,580 - INFO - ** Step0: Table Schema Generation.
+2025-12-12 17:15:16,484 - INFO - table_desc:
+ Table Describer: {"file_path": "/tmp/tmpp_dm0j7l.csv", "table_name": "tmp", "table_description": "Tracks stock-related metrics with categorical descriptions and their corresponding numerical values.", "number_of_rows": 2, "column_list": ["Value_of_Metavante_common_stock", "40664"], "cell_example": [{"Value_of_Metavante_common_stock": "Value of Metavante stock awards", "40664": 121.4}, {"Value_of_Metavante_common_stock": "Total purchase price", "40664": 4187.8}], "column_description": [{"column_name": "Value_of_Metavante_common_stock", "dtype": "object", "example": {"category_examples": ["Value of Metavante stock awards", "Total purchase price"]}, "specific_meaning": "Describes the type of stock value, such as awards or purchase prices."}, {"column_name": "40664", "dtype": "float64", "example": {"category_examples": [121.4, 4187.8]}, "specific_meaning": "Represents the numerical value associated with the stock category, measured in monetary units."}], "paragraph_schema": {"table_name": "tmp", "paragraphs": [{"column": "Value_of_Metavante_common_stock", "description": "Column Value_of_Metavante_common_stock contains data about Value_of_Metavante_common_stock."}, {"column": "40664", "description": "Column 40664 contains data about 40664."}]}}
+2025-12-12 17:15:16,487 - INFO - Generating paragraph schema...
+2025-12-12 17:15:16,487 - INFO - Input paragraphs: chairman and a director of the board of fis as well as the chairman of the board of lps . effective march 1 , 2010 , mr . kennedy and the company mutually agreed that he would no longer serve as an executive officer and director of the company and its subsidiaries . the revenue and expense items with lps are , therefore , summarized above as related party activity through march 1 , 2010 . we believe the amounts earned from or charged by us under each of the foregoing arrangements are fair and reasonable . we believe our service arrangements are priced within the range of prices we offer to third parties . however , the amounts we earned or that were charged under these arrangements were not negotiated at arm 2019s- length , and may not represent the terms that we might have obtained from an unrelated third party . discontinued operations 2014 related party activity through july 2 , 2008 , lps provided a number of services to fnf that are now presented as discontinued operations . these services included title agency services , software development services , real estate related services and other cost sharing services . these activities are included within net earnings from discontinued operations . ( 5 ) acquisitions the results of operations and financial position of the entities acquired during the years ended december 31 , 2010 , 2009 and 2008 are included in the consolidated financial statements from and after the date of acquisition . there were no significant acquisitions in 2010 and 2008 . metavante on october 1 , 2009 , we completed the acquisition of metavante ( the 201cmetavante acquisition 201d ) . metavante expanded the scale of fis core processing and payment capabilities , added trust and wealth management processing services and added to our eft capabilities with the nyce network . metavante also added significant scale to treasury and cash management offerings and provided an entry into the healthcare and government payments markets . pursuant to the agreement and plan of merger dated as of march 31 , 2009 , metavante became a wholly- owned subsidiary of fis . each issued and outstanding share of metavante common stock , par value $ 0.01 per share , was converted into 1.35 shares of fis common stock . in addition , outstanding metavante stock options and other stock-based awards were converted into comparable fis stock options and other stock-based awards at the same conversion ratio . the total purchase price was as follows ( in millions ) : . we recorded a preliminary allocation of the purchase price to metavante tangible and identifiable intangible assets acquired and liabilities assumed based on their estimated fair values as of october 1 , 2009 . goodwill was fidelity national information services , inc . and subsidiaries notes to consolidated financial statements 2014 ( continued ) %%transmsg*** transmitting job : g26369 pcn : 064000000 ***%%pcmsg|64 |00007|yes|no|03/28/2011 17:32|0|0|page is valid , no graphics -- color : n| .
+2025-12-12 17:15:16,487 - INFO - Input question: what portion of total purchase price is related to stock awards?
+2025-12-12 17:15:16,488 - INFO - Created LLM config from Weaver: {'llm': {'api_type': 'openai', 'model': 'openai/qwen3-8b', 'temperature': 0.1, 'max_tokens': 2048, 'timeout': 60, 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'api_key': 'sk-1777dc9ca8564249a388c385d6a23e54'}}
+2025-12-12 17:15:25,815 - INFO - Paragraph schema raw response: {"text_summary": "The paragraph discusses ETR's 2016 financial performance, highlighting revenue growth of 12% compared to 2015 and identifying key business segments contributing to this growth. It emphasizes the impact of specific segments like Technology and Manufacturing on overall revenue figures.", "table_related_text": [{"background_related": "The table likely represents ETR's annual financial data, with 2016 being a critical year for revenue growth as mentioned in the paragraph."}, {"column_related": "The 'Revenue' column corresponds to the 12% growth figure discussed in the paragraph, while 'Business Segment' aligns with the Technology and Manufacturing references."}, {"data_explanation": "The paragraph indicates revenue growth trends that would be reflected in the table's numerical values across different business segments."}], "question_related_text": [{"2016": "The paragraph specifically focuses on ETR's financial performance in 2016, including a 12% revenue growth compared to 2015."}, {"revenue": "Revenue growth is explicitly mentioned as a key metric, with the paragraph detailing its 12% increase in 2016."}, {"business segments": "The paragraph identifies Technology and Manufacturing as primary business segments contributing to revenue growth."}]}
+2025-12-12 17:15:25,815 - INFO - Final paragraph schema: {'text_summary': "The paragraph discusses ETR's 2016 financial performance, highlighting revenue growth of 12% compared to 2015 and identifying key business segments contributing to this growth. It emphasizes the impact of specific segments like Technology and Manufacturing on overall revenue figures.", 'table_related_text': [{'background_related': "The table likely represents ETR's annual financial data, with 2016 being a critical year for revenue growth as mentioned in the paragraph."}, {'column_related': "The 'Revenue' column corresponds to the 12% growth figure discussed in the paragraph, while 'Business Segment' aligns with the Technology and Manufacturing references."}, {'data_explanation': "The paragraph indicates revenue growth trends that would be reflected in the table's numerical values across different business segments."}], 'question_related_text': [{'2016': "The paragraph specifically focuses on ETR's financial performance in 2016, including a 12% revenue growth compared to 2015."}, {'revenue': 'Revenue growth is explicitly mentioned as a key metric, with the paragraph detailing its 12% increase in 2016.'}, {'business segments': 'The paragraph identifies Technology and Manufacturing as primary business segments contributing to revenue growth.'}]}
+2025-12-12 17:15:25,815 - INFO - Saved paragraph schema to /home/lilin/table_weaver/results/paragraph_schemas/FIS_2010_page_70.json
+2025-12-12 17:15:25,815 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 17:15:25,815 - INFO - 1.1 Query Planning...
+2025-12-12 17:15:39,217 - INFO - 1.2 Table schema refinement...
+2025-12-12 17:15:39,220 - INFO - Refined table schema generated successfully
+2025-12-12 17:15:39,220 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 17:15:47,472 - INFO - *** Final Answer (elapsed time: 42.89 s) ***
+2025-12-12 17:15:47,474 - INFO - 121.4
+2025-12-12 17:15:47,474 - INFO - **********
+2025-12-12 17:15:47,474 - INFO - Query: what was the difference in percentage cumulative total shareholder return on masco common stock versus the s&p 500 index for the five year period ended 2017?
+2025-12-12 17:15:47,474 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/MAS_2017_page_27.csv
+2025-12-12 17:15:47,474 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 17:15:47,476 - INFO - 成功加载表格数据，共 4 行，列数: 6
+2025-12-12 17:15:47,476 - INFO - 原始表格列名: ['Unnamed: 0', '2013', '2014', '2015', '2016', '2017']
+2025-12-12 17:15:47,476 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 17:15:47,478 - INFO - 表格清洗完成，新表名: MAS_2017_page_27
+2025-12-12 17:15:47,478 - INFO - 清洗后表格列名: ['Unnamed_0', '2013', '2014', '2015', '2016', '2017']
+2025-12-12 17:15:47,478 - INFO - 清洗后表格大小: (4, 6)
+2025-12-12 17:15:47,478 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: MAS_2017_page_27
+2025-12-12 17:15:47,479 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpmpg1556m.csv
+2025-12-12 17:15:47,479 - INFO - 0. Generate table description.
+2025-12-12 17:15:47,479 - INFO - Get table schema...
+2025-12-12 17:15:47,479 - INFO - ** Step0: Table Schema Generation.
+2025-12-12 17:15:56,485 - INFO - table_desc:
+ Table Describer: {"file_path": "/tmp/tmpmpg1556m.csv", "table_name": "tmp", "table_description": "Tracks annual performance metrics for various financial entities or indices from 2013 to 2017, with numerical values representing measured quantities.", "number_of_rows": 4, "column_list": ["Unnamed_0", "2013", "2014", "2015", "2016", "2017"], "cell_example": [{"Unnamed_0": "Masco", "2013": 138.48, "2014": 155.26, "2015": 200.79, "2016": 227.08, "2017": 318.46}, {"Unnamed_0": "S&P 500 Index", "2013": 132.04, "2014": 149.89, "2015": 151.94, "2016": 169.82, "2017": 206.49}, {"Unnamed_0": "S&P Industrials Index", "2013": 140.18, "2014": 153.73, "2015": 149.83, "2016": 177.65, "2017": 214.55}, {"Unnamed_0": "S&P Consumer Durables & Apparel Index", "2013": 135.84, "2014": 148.31, "2015": 147.23, "2016": 138.82, "2017": 164.39}], "column_description": [{"column_name": "Unnamed_0", "dtype": "object", "example": {"category_examples": ["Masco", "S&P 500 Index", "S&P Industrials Index", "S&P Consumer Durables & Apparel Index"]}, "specific_meaning": "Financial entity or index identifier, with 4 category examples displayed"}, {"column_name": "2013", "dtype": "float64", "example": {"category_examples": [138.48, 132.04, 140.18, 135.84]}, "specific_meaning": "Performance metric value for the year 2013, with float64 data type"}, {"column_name": "2014", "dtype": "float64", "example": {"category_examples": [155.26, 149.89, 153.73, 148.31]}, "specific_meaning": "Performance metric value for the year 2014, with float64 data type"}, {"column_name": "2015", "dtype": "float64", "example": {"category_examples": [200.79, 151.94, 149.83, 147.23]}, "specific_meaning": "Performance metric value for the year 2015, with float64 data type"}, {"column_name": "2016", "dtype": "float64", "example": {"category_examples": [227.08, 169.82, 177.65, 138.82]}, "specific_meaning": "Performance metric value for the year 2016, with float64 data type"}, {"column_name": "2017", "dtype": "float64", "example": {"category_examples": [318.46, 206.49, 214.55, 164.39]}, "specific_meaning": "Performance metric value for the year 2017, with float64 data type"}], "paragraph_schema": {"table_name": "tmp", "paragraphs": [{"column": "Unnamed_0", "description": "Column Unnamed_0 contains data about Unnamed_0."}, {"column": "2013", "description": "Column 2013 contains data about 2013."}, {"column": "2014", "description": "Column 2014 contains data about 2014."}, {"column": "2015", "description": "Column 2015 contains data about 2015."}, {"column": "2016", "description": "Column 2016 contains data about 2016."}, {"column": "2017", "description": "Column 2017 contains data about 2017."}]}}
+2025-12-12 17:15:56,487 - INFO - Generating paragraph schema...
+2025-12-12 17:15:56,488 - INFO - Input paragraphs: performance graph the table below compares the cumulative total shareholder return on our common stock with the cumulative total return of ( i ) the standard & poor's 500 composite stock index ( "s&p 500 index" ) , ( ii ) the standard & poor's industrials index ( "s&p industrials index" ) and ( iii ) the standard & poor's consumer durables & apparel index ( "s&p consumer durables & apparel index" ) , from december 31 , 2012 through december 31 , 2017 , when the closing price of our common stock was $ 43.94 . the graph assumes investments of $ 100 on december 31 , 2012 in our common stock and in each of the three indices and the reinvestment of dividends . the table below sets forth the value , as of december 31 for each of the years indicated , of a $ 100 investment made on december 31 , 2012 in each of our common stock , the s&p 500 index , the s&p industrials index and the s&p consumer durables & apparel index and includes the reinvestment of dividends  $ 50.00 $ 100.00 $ 150.00 $ 200.00 $ 250.00 $ 300.00 $ 350.00 masco s&p 500 index s&p industrials index s&p consumer durables & apparel index .
+2025-12-12 17:15:56,488 - INFO - Input question: what was the difference in percentage cumulative total shareholder return on masco common stock versus the s&p 500 index for the five year period ended 2017?
+2025-12-12 17:15:56,489 - INFO - Created LLM config from Weaver: {'llm': {'api_type': 'openai', 'model': 'openai/qwen3-8b', 'temperature': 0.1, 'max_tokens': 2048, 'timeout': 60, 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'api_key': 'sk-1777dc9ca8564249a388c385d6a23e54'}}
+2025-12-12 17:16:13,882 - INFO - Paragraph schema raw response: {"text_summary": "The paragraph outlines the financial metrics of ETR company in 2016, highlighting revenue growth across different business segments and operational expenses.", "table_related_text": [{"background_related": "The paragraph discusses ETR's 2016 financial performance, which aligns with the table's focus on revenue and expense data."}, {"column_related": "The 'Revenue' column likely represents the figures mentioned in the paragraph regarding quarterly revenue increases."}, {"data_explanation": "The paragraph notes a 15% revenue growth trend, which may correspond to the numerical values in the table's 'Revenue' column."}], "question_related_text": [{"2016": "The paragraph specifically addresses ETR's financial performance during the year 2016."}, {"revenue": "Revenue growth is explicitly mentioned as a key metric in the paragraph."}]}
+2025-12-12 17:16:13,882 - INFO - Final paragraph schema: {'text_summary': 'The paragraph outlines the financial metrics of ETR company in 2016, highlighting revenue growth across different business segments and operational expenses.', 'table_related_text': [{'background_related': "The paragraph discusses ETR's 2016 financial performance, which aligns with the table's focus on revenue and expense data."}, {'column_related': "The 'Revenue' column likely represents the figures mentioned in the paragraph regarding quarterly revenue increases."}, {'data_explanation': "The paragraph notes a 15% revenue growth trend, which may correspond to the numerical values in the table's 'Revenue' column."}], 'question_related_text': [{'2016': "The paragraph specifically addresses ETR's financial performance during the year 2016."}, {'revenue': 'Revenue growth is explicitly mentioned as a key metric in the paragraph.'}]}
+2025-12-12 17:16:13,882 - INFO - Saved paragraph schema to /home/lilin/table_weaver/results/paragraph_schemas/MAS_2017_page_27.json
+2025-12-12 17:16:13,882 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 17:16:13,882 - INFO - 1.1 Query Planning...
+2025-12-12 17:16:21,286 - INFO - 1.2 Table schema refinement...
+2025-12-12 17:16:21,288 - INFO - cell example not found
+2025-12-12 17:16:21,289 - INFO - Refined table schema generated successfully
+2025-12-12 17:16:21,289 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 17:16:40,950 - INFO - *** Final Answer (elapsed time: 53.48 s) ***
+2025-12-12 17:16:40,953 - INFO - 0.0
+2025-12-12 17:16:40,953 - INFO - **********
+2025-12-12 17:16:40,953 - INFO - Query: what was the percentage change in total rental expense under operating leases from july 2 , 2005 to july 1 , 2006?
+2025-12-12 17:16:40,953 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/SYY_2006_page_71.csv
+2025-12-12 17:16:40,953 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 17:16:40,954 - INFO - 成功加载表格数据，共 6 行，列数: 2
+2025-12-12 17:16:40,954 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount']
+2025-12-12 17:16:40,954 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 17:16:40,956 - INFO - 表格清洗完成，新表名: SYY_2006_page_71
+2025-12-12 17:16:40,956 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount']
+2025-12-12 17:16:40,956 - INFO - 清洗后表格大小: (6, 2)
+2025-12-12 17:16:40,956 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: SYY_2006_page_71
+2025-12-12 17:16:40,956 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpxlnx820b.csv
+2025-12-12 17:16:40,956 - INFO - 0. Generate table description.
+2025-12-12 17:16:40,957 - INFO - Get table schema...
+2025-12-12 17:16:40,957 - INFO - ** Step0: Table Schema Generation.
+2025-12-12 17:16:48,139 - INFO - table_desc:
+ Table Describer: {"file_path": "/tmp/tmpxlnx820b.csv", "table_name": "tmp", "table_description": "This table appears to track financial or metric data over time, with one column representing temporal markers and the other representing measured values. The data may relate to annual figures, quarterly reports, or time-series analysis.", "number_of_rows": 6, "column_list": ["Unnamed_0", "Amount"], "cell_example": [{"Unnamed_0": 2007.0, "Amount": 56499000.0}, {"Unnamed_0": 2008.0, "Amount": 46899000.0}, {"Unnamed_0": 2009.0, "Amount": 39904000.0}, {"Unnamed_0": 2010.0, "Amount": 33329000.0}, {"Unnamed_0": 2011.0, "Amount": 25666000.0}, {"Unnamed_0": NaN, "Amount": 128981000.0}], "column_description": [{"column_name": "Unnamed_0", "dtype": "float64", "example": {"category_examples": [2007.0, 2008.0, 2009.0, 2010.0, 2011.0]}, "specific_meaning": "Temporal marker representing years, stored as floating-point numbers (e.g., 2007.0, 2008.0). Likely serves as a time dimension for time-series analysis."}, {"column_name": "Amount", "dtype": "float64", "example": {"category_examples": [46899000.0, 25666000.0, 128981000.0, 33329000.0, 39904000.0]}, "specific_meaning": "Quantitative metric value, possibly representing financial figures (e.g., revenue, expenditure) in numerical form with decimal precision."}], "paragraph_schema": {"table_name": "tmp", "paragraphs": [{"column": "Unnamed_0", "description": "Column Unnamed_0 contains data about Unnamed_0."}, {"column": "Amount", "description": "Column Amount contains data about Amount."}]}}
+2025-12-12 17:16:48,142 - INFO - Generating paragraph schema...
+2025-12-12 17:16:48,142 - INFO - Input paragraphs: total debt total debt at july 1 , 2006 was $ 1762692000 , of which approximately 75% ( 75 % ) was at fixed rates averaging 6.0% ( 6.0 % ) with an average life of 19 years , and the remainder was at floating rates averaging 5.2% ( 5.2 % ) . certain loan agreements contain typical debt covenants to protect noteholders , including provisions to maintain the company 2019s long-term debt to total capital ratio below a specified level . sysco was in compliance with all debt covenants at july 1 , 2006 . the fair value of sysco 2019s total long-term debt is estimated based on the quoted market prices for the same or similar issues or on the current rates offered to the company for debt of the same remaining maturities . the fair value of total long-term debt approximated $ 1669999000 at july 1 , 2006 and $ 1442721000 at july 2 , 2005 , respectively . as of july 1 , 2006 and july 2 , 2005 , letters of credit outstanding were $ 60000000 and $ 76817000 , respectively . 9 . leases although sysco normally purchases assets , it has obligations under capital and operating leases for certain distribution facilities , vehicles and computers . total rental expense under operating leases was $ 100690000 , $ 92710000 , and $ 86842000 in fiscal 2006 , 2005 and 2004 , respectively . contingent rentals , subleases and assets and obligations under capital leases are not significant . aggregate minimum lease payments by fiscal year under existing non-capitalized long-term leases are as follows: . 2007 ************************************************************************* $ 56499000 2008 ************************************************************************* 46899000 2009 ************************************************************************* 39904000 2010 ************************************************************************* 33329000 2011 ************************************************************************* 25666000 later years********************************************************************* 128981000 10 . employee benefit plans sysco has defined benefit and defined contribution retirement plans for its employees . also , the company contributes to various multi-employer plans under collective bargaining agreements and provides certain health care benefits to eligible retirees and their dependents . sysco maintains a qualified retirement plan ( retirement plan ) that pays benefits to employees at retirement , using formulas based on a participant 2019s years of service and compensation . the defined contribution 401 ( k ) plan provides that under certain circumstances the company may make matching contributions of up to 50% ( 50 % ) of the first 6% ( 6 % ) of a participant 2019s compensation . sysco 2019s contributions to this plan were $ 21898000 in 2006 , $ 28109000 in 2005 , and $ 27390000 in 2004 . in addition to receiving benefits upon retirement under the company 2019s defined benefit plan , participants in the management incentive plan ( see 2018 2018management incentive compensation 2019 2019 under 2018 2018stock based compensation plans 2019 2019 ) will receive benefits under a supplemental executive retirement plan ( serp ) . this plan is a nonqualified , unfunded supplementary retirement plan . in order to meet its obligations under the serp , sysco maintains life insurance policies on the lives of the participants with carrying values of $ 153659000 at july 1 , 2006 and $ 138931000 at july 2 , 2005 . these policies are not included as plan assets or in the funded status amounts in the table below . sysco is the sole owner and beneficiary of such policies . projected benefit obligations and accumulated benefit obligations for the serp were $ 327450000 and $ 238599000 , respectively , as of july 1 , 2006 and $ 375491000 and $ 264010000 , respectively , as of july 2 , 2005 . the company made cash contributions to its pension plans of $ 73764000 and $ 220361000 in fiscal years 2006 and 2005 , respectively , including $ 66000000 and $ 214000000 in voluntary contributions to the retirement plan in fiscal 2006 and 2005 , respectively . in fiscal 2006 , the company 2019s voluntary contribution to the retirement plan represented the maximum tax-deductible amount . in fiscal 2005 , the company made a voluntary contribution of $ 134000000 in the fourth quarter in addition to the $ 80000000 %%transmsg*** transmitting job : h39408 pcn : 049000000 *** %%pcmsg|47 |00011|yes|no|09/06/2006 17:22|0|1|page is valid , no graphics -- color : n| .
+2025-12-12 17:16:48,142 - INFO - Input question: what was the percentage change in total rental expense under operating leases from july 2 , 2005 to july 1 , 2006?
+2025-12-12 17:16:48,144 - INFO - Created LLM config from Weaver: {'llm': {'api_type': 'openai', 'model': 'openai/qwen3-8b', 'temperature': 0.1, 'max_tokens': 2048, 'timeout': 60, 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'api_key': 'sk-1777dc9ca8564249a388c385d6a23e54'}}
+2025-12-12 17:17:03,980 - INFO - Paragraph schema raw response: {"text_summary": "This paragraph discusses the financial performance of ETR company in 2016, including revenue growth and key business segments.", "table_related_text": [{"background_related": "The paragraph provides context about ETR's 2016 financial performance, which is likely the basis for the table data."}, {"column_related": "The 'Revenue' column in the table likely corresponds to the revenue figures mentioned in the paragraph."}, {"data_explanation": "The paragraph mentions growth trends that might be reflected in the table's numerical values."}], "question_related_text": [{"2016": "The paragraph focuses on ETR's performance specifically in 2016."}, {"revenue": "Revenue growth is a key metric discussed in the paragraph."}]}
+2025-12-12 17:17:03,981 - INFO - Final paragraph schema: {'text_summary': 'This paragraph discusses the financial performance of ETR company in 2016, including revenue growth and key business segments.', 'table_related_text': [{'background_related': "The paragraph provides context about ETR's 2016 financial performance, which is likely the basis for the table data."}, {'column_related': "The 'Revenue' column in the table likely corresponds to the revenue figures mentioned in the paragraph."}, {'data_explanation': "The paragraph mentions growth trends that might be reflected in the table's numerical values."}], 'question_related_text': [{'2016': "The paragraph focuses on ETR's performance specifically in 2016."}, {'revenue': 'Revenue growth is a key metric discussed in the paragraph.'}]}
+2025-12-12 17:17:03,981 - INFO - Saved paragraph schema to /home/lilin/table_weaver/results/paragraph_schemas/SYY_2006_page_71.json
+2025-12-12 17:17:03,981 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 17:17:03,981 - INFO - 1.1 Query Planning...
+2025-12-12 17:17:22,841 - INFO - 1.2 Table schema refinement...
+2025-12-12 17:17:22,842 - INFO - cell example not found
+2025-12-12 17:17:22,842 - INFO - Refined table schema generated successfully
+2025-12-12 17:17:22,842 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 17:17:39,637 - INFO - *** Final Answer (elapsed time: 58.68 s) ***
+2025-12-12 17:17:39,639 - INFO - 12.50
+2025-12-12 17:17:39,639 - INFO - **********
+2025-12-12 17:17:39,640 - INFO - Query: what percent of total recourse debt is current?
+2025-12-12 17:17:39,640 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/AES_2010_page_227.csv
+2025-12-12 17:17:39,640 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 17:17:39,641 - INFO - 成功加载表格数据，共 7 行，列数: 2
+2025-12-12 17:17:39,641 - INFO - 原始表格列名: ['December 31,', 'Annual Maturities  (in millions)']
+2025-12-12 17:17:39,641 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 17:17:39,642 - INFO - 表格清洗完成，新表名: AES_2010_page_227
+2025-12-12 17:17:39,642 - INFO - 清洗后表格列名: ['December_31', 'Annual_Maturities_in_millions']
+2025-12-12 17:17:39,642 - INFO - 清洗后表格大小: (7, 2)
+2025-12-12 17:17:39,642 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: AES_2010_page_227
+2025-12-12 17:17:39,643 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpqqajjk3w.csv
+2025-12-12 17:17:39,643 - INFO - 0. Generate table description.
+2025-12-12 17:17:39,643 - INFO - Get table schema...
+2025-12-12 17:17:39,643 - INFO - ** Step0: Table Schema Generation.
+2025-12-12 17:17:49,957 - INFO - table_desc:
+ Table Describer: {"file_path": "/tmp/tmpqqajjk3w.csv", "table_name": "tmp", "table_description": "This table contains financial data related to annual maturities, with dates and corresponding maturity amounts in millions. It is likely used for reporting or analyzing debt obligations over time.", "number_of_rows": 7, "column_list": ["December_31", "Annual_Maturities_in_millions"], "cell_example": [{"December_31": 2011.0, "Annual_Maturities_in_millions": 463.0}, {"December_31": 2012.0, "Annual_Maturities_in_millions": NaN}, {"December_31": 2013.0, "Annual_Maturities_in_millions": NaN}, {"December_31": 2014.0, "Annual_Maturities_in_millions": 497.0}, {"December_31": 2015.0, "Annual_Maturities_in_millions": 500.0}, {"December_31": NaN, "Annual_Maturities_in_millions": 3152.0}, {"December_31": NaN, "Annual_Maturities_in_millions": 4612.0}], "column_description": [{"column_name": "December_31", "dtype": "float64", "example": {"category_examples": [2011.0, 2012.0, 2013.0, 2014.0, 2015.0]}, "specific_meaning": "Represents the year-end date for financial reporting, with categories including 2011, 2012, 2013, 2014, and 2015"}, {"column_name": "Annual_Maturities_in_millions", "dtype": "float64", "example": {"category_examples": [463.0, 497.0, 500.0, 3152.0, 4612.0]}, "specific_meaning": "The total amount of annual maturities reported in millions of currency units, with examples ranging from 463.0 to 4612.0"}], "paragraph_schema": {"table_name": "tmp", "paragraphs": [{"column": "December_31", "description": "Column December_31 contains data about December_31."}, {"column": "Annual_Maturities_in_millions", "description": "Column Annual_Maturities_in_millions contains data about Annual_Maturities_in_millions."}]}}
+2025-12-12 17:17:49,960 - INFO - Generating paragraph schema...
+2025-12-12 17:17:49,960 - INFO - Input paragraphs: the aes corporation notes to consolidated financial statements 2014 ( continued ) december 31 , 2010 , 2009 , and 2008 recourse debt as of december 31 , 2010 is scheduled to reach maturity as set forth in the table below : december 31 , annual maturities ( in millions ) . recourse debt transactions during 2010 , the company redeemed $ 690 million aggregate principal of its 8.75% ( 8.75 % ) second priority senior secured notes due 2013 ( 201cthe 2013 notes 201d ) . the 2013 notes were redeemed at a redemption price equal to 101.458% ( 101.458 % ) of the principal amount redeemed . the company recognized a pre-tax loss on the redemption of the 2013 notes of $ 15 million for the year ended december 31 , 2010 , which is included in 201cother expense 201d in the accompanying consolidated statement of operations . on july 29 , 2010 , the company entered into a second amendment ( 201camendment no . 2 201d ) to the fourth amended and restated credit and reimbursement agreement , dated as of july 29 , 2008 , among the company , various subsidiary guarantors and various lending institutions ( the 201cexisting credit agreement 201d ) that amends and restates the existing credit agreement ( as so amended and restated by amendment no . 2 , the 201cfifth amended and restated credit agreement 201d ) . the fifth amended and restated credit agreement adjusted the terms and conditions of the existing credit agreement , including the following changes : 2022 the aggregate commitment for the revolving credit loan facility was increased to $ 800 million ; 2022 the final maturity date of the revolving credit loan facility was extended to january 29 , 2015 ; 2022 changes to the facility fee applicable to the revolving credit loan facility ; 2022 the interest rate margin applicable to the revolving credit loan facility is now based on the credit rating assigned to the loans under the credit agreement , with pricing currently at libor + 3.00% ( 3.00 % ) ; 2022 there is an undrawn fee of 0.625% ( 0.625 % ) per annum ; 2022 the company may incur a combination of additional term loan and revolver commitments so long as total term loan and revolver commitments ( including those currently outstanding ) do not exceed $ 1.4 billion ; and 2022 the negative pledge ( i.e. , a cap on first lien debt ) of $ 3.0 billion . recourse debt covenants and guarantees certain of the company 2019s obligations under the senior secured credit facility are guaranteed by its direct subsidiaries through which the company owns its interests in the aes shady point , aes hawaii , aes warrior run and aes eastern energy businesses . the company 2019s obligations under the senior secured credit facility are , subject to certain exceptions , secured by : ( i ) all of the capital stock of domestic subsidiaries owned directly by the company and 65% ( 65 % ) of the capital stock of certain foreign subsidiaries owned directly or indirectly by the company ; and .
+2025-12-12 17:17:49,960 - INFO - Input question: what percent of total recourse debt is current?
+2025-12-12 17:17:49,961 - INFO - Created LLM config from Weaver: {'llm': {'api_type': 'openai', 'model': 'openai/qwen3-8b', 'temperature': 0.1, 'max_tokens': 2048, 'timeout': 60, 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'api_key': 'sk-1777dc9ca8564249a388c385d6a23e54'}}
+2025-12-12 21:38:28,466 - INFO - 初始化Weaver框架...
+2025-12-12 21:38:28,476 - INFO - Weaver框架初始化完成
+2025-12-12 21:38:28,483 - INFO - TableZoomer执行器初始化完成
+2025-12-12 21:38:28,486 - INFO - Query: what is the net change in net revenue during 2015 for entergy corporation?
+2025-12-12 21:38:28,486 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ETR_2016_page_23.csv
+2025-12-12 21:38:28,486 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:38:28,488 - INFO - 成功加载表格数据，共 8 行，列数: 2
+2025-12-12 21:38:28,488 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount (In Millions)']
+2025-12-12 21:38:28,488 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:38:28,493 - INFO - 表格清洗完成，新表名: ETR_2016_page_23
+2025-12-12 21:38:28,493 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount_In_Millions']
+2025-12-12 21:38:28,493 - INFO - 清洗后表格大小: (8, 2)
+2025-12-12 21:38:28,493 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ETR_2016_page_23
+2025-12-12 21:38:28,495 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpxn5u_xbs.csv
+2025-12-12 21:38:28,495 - INFO - 0. Generate table description.
+2025-12-12 21:38:28,495 - INFO - Get table schema...
+2025-12-12 21:38:28,495 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ETR_2016_page_23.json
+2025-12-12 21:38:28,495 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ETR_2016_page_23.json
+2025-12-12 21:38:28,495 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:38:28,495 - INFO - 1.1 Query Planning...
+2025-12-12 21:38:38,738 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:38:38,743 - INFO - Refined table schema generated successfully
+2025-12-12 21:38:38,743 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:38:38,743 - ERROR - TableZoomer plan-execute error: 'TableZoomerCodeExecutor' object has no attribute 'process_question'
+2025-12-12 21:38:38,743 - INFO - Falling back to original TableZoomer execution...
+2025-12-12 21:38:43,636 - INFO - *** Final Answer (elapsed time: 15.15 s) ***
+2025-12-12 21:38:43,636 - INFO - 94.0
+2025-12-12 21:38:43,637 - INFO - **********
+2025-12-12 21:38:43,638 - INFO - Query: what percentage of total facilities as measured in square feet are leased?
+2025-12-12 21:38:43,638 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/INTC_2015_page_41.csv
+2025-12-12 21:38:43,638 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:38:43,639 - INFO - 成功加载表格数据，共 3 行，列数: 4
+2025-12-12 21:38:43,639 - INFO - 原始表格列名: ['(Square Feet in Millions)', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:38:43,639 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:38:43,641 - INFO - 表格清洗完成，新表名: INTC_2015_page_41
+2025-12-12 21:38:43,641 - INFO - 清洗后表格列名: ['Square_Feet_in_Millions', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:38:43,641 - INFO - 清洗后表格大小: (3, 4)
+2025-12-12 21:38:43,641 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: INTC_2015_page_41
+2025-12-12 21:38:43,642 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpzgl0hkfb.csv
+2025-12-12 21:38:43,642 - INFO - 0. Generate table description.
+2025-12-12 21:38:43,642 - INFO - Get table schema...
+2025-12-12 21:38:43,642 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/INTC_2015_page_41.json
+2025-12-12 21:38:43,642 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/INTC_2015_page_41.json
+2025-12-12 21:38:43,642 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:38:43,642 - INFO - 1.1 Query Planning...
+2025-12-12 21:39:19,454 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:39:19,457 - INFO - cell example not found
+2025-12-12 21:39:19,459 - INFO - Refined table schema generated successfully
+2025-12-12 21:39:19,459 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:39:19,459 - ERROR - TableZoomer plan-execute error: 'TableZoomerCodeExecutor' object has no attribute 'process_question'
+2025-12-12 21:39:19,459 - INFO - Falling back to original TableZoomer execution...
+2025-12-12 21:39:23,779 - INFO - *** Final Answer (elapsed time: 40.14 s) ***
+2025-12-12 21:39:23,779 - INFO - The provided table does not include data specifically distinguishing between leased and non-leased facilities. The available columns ("Total" and "Square_Feet_in_Millions") represent aggregated totals without breakdowns related to leasing status. Therefore, the percentage cannot be calculated from the given data.
+2025-12-12 21:39:23,779 - INFO - **********
+2025-12-12 21:39:23,779 - INFO - Query: what is the percentage change in cash flow hedges in 2011 compare to the 2010?
+2025-12-12 21:39:23,780 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ADI_2011_page_61.csv
+2025-12-12 21:39:23,780 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:39:23,782 - INFO - 成功加载表格数据，共 2 行，列数: 3
+2025-12-12 21:39:23,782 - INFO - 原始表格列名: ['Statement of Income', 'October 29, 2011', 'October 30, 2010']
+2025-12-12 21:39:23,782 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:39:23,785 - INFO - 表格清洗完成，新表名: ADI_2011_page_61
+2025-12-12 21:39:23,785 - INFO - 清洗后表格列名: ['Statement_of_Income', 'October_29_2011', 'October_30_2010']
+2025-12-12 21:39:23,785 - INFO - 清洗后表格大小: (2, 3)
+2025-12-12 21:39:23,785 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ADI_2011_page_61
+2025-12-12 21:39:23,787 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpqqd6hek3.csv
+2025-12-12 21:39:23,787 - INFO - 0. Generate table description.
+2025-12-12 21:39:23,787 - INFO - Get table schema...
+2025-12-12 21:39:23,787 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ADI_2011_page_61.json
+2025-12-12 21:39:23,787 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ADI_2011_page_61.json
+2025-12-12 21:39:23,787 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:39:23,787 - INFO - 1.1 Query Planning...
+2025-12-12 21:39:45,176 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:39:45,180 - INFO - Refined table schema generated successfully
+2025-12-12 21:39:45,180 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:39:45,180 - ERROR - TableZoomer plan-execute error: 'TableZoomerCodeExecutor' object has no attribute 'process_question'
+2025-12-12 21:39:45,180 - INFO - Falling back to original TableZoomer execution...
+2025-12-12 21:39:54,337 - INFO - *** Final Answer (elapsed time: 30.56 s) ***
+2025-12-12 21:39:54,337 - INFO - -200.0
+2025-12-12 21:39:54,337 - INFO - **********
+2025-12-12 21:39:54,338 - INFO - Query: what portion of total purchase price is related to stock awards?
+2025-12-12 21:39:54,338 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/FIS_2010_page_70.csv
+2025-12-12 21:39:54,338 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:39:54,339 - INFO - 成功加载表格数据，共 2 行，列数: 2
+2025-12-12 21:39:54,340 - INFO - 原始表格列名: ['Value of Metavante common stock', '$4,066.4']
+2025-12-12 21:39:54,340 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:39:54,344 - INFO - 表格清洗完成，新表名: FIS_2010_page_70
+2025-12-12 21:39:54,344 - INFO - 清洗后表格列名: ['Value_of_Metavante_common_stock', '40664']
+2025-12-12 21:39:54,344 - INFO - 清洗后表格大小: (2, 2)
+2025-12-12 21:39:54,344 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: FIS_2010_page_70
+2025-12-12 21:39:54,345 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpwbl7u3to.csv
+2025-12-12 21:39:54,345 - INFO - 0. Generate table description.
+2025-12-12 21:39:54,345 - INFO - Get table schema...
+2025-12-12 21:39:54,345 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/FIS_2010_page_70.json
+2025-12-12 21:39:54,345 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/FIS_2010_page_70.json
+2025-12-12 21:39:54,346 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:39:54,346 - INFO - 1.1 Query Planning...
+2025-12-12 21:46:38,701 - INFO - 初始化Weaver框架...
+2025-12-12 21:46:38,711 - INFO - Weaver框架初始化完成
+2025-12-12 21:46:38,718 - INFO - TableZoomer执行器初始化完成
+2025-12-12 21:46:38,721 - INFO - Query: what is the net change in net revenue during 2015 for entergy corporation?
+2025-12-12 21:46:38,721 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ETR_2016_page_23.csv
+2025-12-12 21:46:38,721 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:46:38,723 - INFO - 成功加载表格数据，共 8 行，列数: 2
+2025-12-12 21:46:38,723 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount (In Millions)']
+2025-12-12 21:46:38,724 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:46:38,729 - INFO - 表格清洗完成，新表名: ETR_2016_page_23
+2025-12-12 21:46:38,729 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount_In_Millions']
+2025-12-12 21:46:38,729 - INFO - 清洗后表格大小: (8, 2)
+2025-12-12 21:46:38,729 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ETR_2016_page_23
+2025-12-12 21:46:38,730 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpwxfb51r7.csv
+2025-12-12 21:46:38,730 - INFO - 0. Generate table description.
+2025-12-12 21:46:38,730 - INFO - Get table schema...
+2025-12-12 21:46:38,730 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ETR_2016_page_23.json
+2025-12-12 21:46:38,730 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ETR_2016_page_23.json
+2025-12-12 21:46:38,730 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:46:38,730 - INFO - 1.1 Query Planning...
+2025-12-12 21:46:58,830 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:46:58,835 - INFO - Refined table schema generated successfully
+2025-12-12 21:46:58,835 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:46:58,835 - INFO - *** Final Answer (elapsed time: 20.11 s) ***
+2025-12-12 21:46:58,835 - INFO - 无法提取最终答案
+2025-12-12 21:46:58,835 - INFO - **********
+2025-12-12 21:46:58,835 - INFO - Query: what percentage of total facilities as measured in square feet are leased?
+2025-12-12 21:46:58,835 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/INTC_2015_page_41.csv
+2025-12-12 21:46:58,835 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:46:58,836 - INFO - 成功加载表格数据，共 3 行，列数: 4
+2025-12-12 21:46:58,836 - INFO - 原始表格列名: ['(Square Feet in Millions)', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:46:58,836 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:46:58,838 - INFO - 表格清洗完成，新表名: INTC_2015_page_41
+2025-12-12 21:46:58,838 - INFO - 清洗后表格列名: ['Square_Feet_in_Millions', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:46:58,838 - INFO - 清洗后表格大小: (3, 4)
+2025-12-12 21:46:58,838 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: INTC_2015_page_41
+2025-12-12 21:46:58,838 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp791dyvqz.csv
+2025-12-12 21:46:58,838 - INFO - 0. Generate table description.
+2025-12-12 21:46:58,838 - INFO - Get table schema...
+2025-12-12 21:46:58,838 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/INTC_2015_page_41.json
+2025-12-12 21:46:58,839 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/INTC_2015_page_41.json
+2025-12-12 21:46:58,839 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:46:58,839 - INFO - 1.1 Query Planning...
+2025-12-12 21:47:13,492 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:47:13,494 - INFO - cell example not found
+2025-12-12 21:47:13,495 - INFO - Refined table schema generated successfully
+2025-12-12 21:47:13,495 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:47:13,495 - INFO - *** Final Answer (elapsed time: 14.66 s) ***
+2025-12-12 21:47:13,495 - INFO - 无法提取最终答案
+2025-12-12 21:47:13,495 - INFO - **********
+2025-12-12 21:47:13,495 - INFO - Query: what is the percentage change in cash flow hedges in 2011 compare to the 2010?
+2025-12-12 21:47:13,495 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ADI_2011_page_61.csv
+2025-12-12 21:47:13,495 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:47:13,497 - INFO - 成功加载表格数据，共 2 行，列数: 3
+2025-12-12 21:47:13,497 - INFO - 原始表格列名: ['Statement of Income', 'October 29, 2011', 'October 30, 2010']
+2025-12-12 21:47:13,497 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:47:13,500 - INFO - 表格清洗完成，新表名: ADI_2011_page_61
+2025-12-12 21:47:13,500 - INFO - 清洗后表格列名: ['Statement_of_Income', 'October_29_2011', 'October_30_2010']
+2025-12-12 21:47:13,500 - INFO - 清洗后表格大小: (2, 3)
+2025-12-12 21:47:13,500 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ADI_2011_page_61
+2025-12-12 21:47:13,501 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmplpknewrt.csv
+2025-12-12 21:47:13,501 - INFO - 0. Generate table description.
+2025-12-12 21:47:13,501 - INFO - Get table schema...
+2025-12-12 21:47:13,501 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ADI_2011_page_61.json
+2025-12-12 21:47:13,501 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ADI_2011_page_61.json
+2025-12-12 21:47:13,502 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:47:13,502 - INFO - 1.1 Query Planning...
+2025-12-12 21:47:35,580 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:47:35,584 - INFO - Refined table schema generated successfully
+2025-12-12 21:47:35,584 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:47:35,584 - INFO - *** Final Answer (elapsed time: 22.09 s) ***
+2025-12-12 21:47:35,584 - INFO - 无法提取最终答案
+2025-12-12 21:47:35,584 - INFO - **********
+2025-12-12 21:47:35,585 - INFO - Query: what portion of total purchase price is related to stock awards?
+2025-12-12 21:47:35,585 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/FIS_2010_page_70.csv
+2025-12-12 21:47:35,585 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:47:35,586 - INFO - 成功加载表格数据，共 2 行，列数: 2
+2025-12-12 21:47:35,586 - INFO - 原始表格列名: ['Value of Metavante common stock', '$4,066.4']
+2025-12-12 21:47:35,586 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:47:35,587 - INFO - 表格清洗完成，新表名: FIS_2010_page_70
+2025-12-12 21:47:35,587 - INFO - 清洗后表格列名: ['Value_of_Metavante_common_stock', '40664']
+2025-12-12 21:47:35,587 - INFO - 清洗后表格大小: (2, 2)
+2025-12-12 21:47:35,587 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: FIS_2010_page_70
+2025-12-12 21:47:35,588 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpdkwphcvd.csv
+2025-12-12 21:47:35,588 - INFO - 0. Generate table description.
+2025-12-12 21:47:35,588 - INFO - Get table schema...
+2025-12-12 21:47:35,588 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/FIS_2010_page_70.json
+2025-12-12 21:47:35,588 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/FIS_2010_page_70.json
+2025-12-12 21:47:35,588 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:47:35,588 - INFO - 1.1 Query Planning...
+2025-12-12 21:47:44,757 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:47:44,761 - INFO - Refined table schema generated successfully
+2025-12-12 21:47:44,761 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:47:44,762 - INFO - *** Final Answer (elapsed time: 9.18 s) ***
+2025-12-12 21:47:44,762 - INFO - 无法提取最终答案
+2025-12-12 21:47:44,762 - INFO - **********
+2025-12-12 21:47:44,762 - INFO - Query: what was the difference in percentage cumulative total shareholder return on masco common stock versus the s&p 500 index for the five year period ended 2017?
+2025-12-12 21:47:44,762 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/MAS_2017_page_27.csv
+2025-12-12 21:47:44,762 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:47:44,763 - INFO - 成功加载表格数据，共 4 行，列数: 6
+2025-12-12 21:47:44,763 - INFO - 原始表格列名: ['Unnamed: 0', '2013', '2014', '2015', '2016', '2017']
+2025-12-12 21:47:44,763 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:47:44,766 - INFO - 表格清洗完成，新表名: MAS_2017_page_27
+2025-12-12 21:47:44,766 - INFO - 清洗后表格列名: ['Unnamed_0', '2013', '2014', '2015', '2016', '2017']
+2025-12-12 21:47:44,766 - INFO - 清洗后表格大小: (4, 6)
+2025-12-12 21:47:44,766 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: MAS_2017_page_27
+2025-12-12 21:47:44,767 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpjz43e1ri.csv
+2025-12-12 21:47:44,767 - INFO - 0. Generate table description.
+2025-12-12 21:47:44,767 - INFO - Get table schema...
+2025-12-12 21:47:44,767 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/MAS_2017_page_27.json
+2025-12-12 21:47:44,767 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/MAS_2017_page_27.json
+2025-12-12 21:47:44,767 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:47:44,767 - INFO - 1.1 Query Planning...
+2025-12-12 21:47:56,538 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:47:56,542 - INFO - Refined table schema generated successfully
+2025-12-12 21:47:56,542 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:47:56,542 - INFO - *** Final Answer (elapsed time: 11.78 s) ***
+2025-12-12 21:47:56,542 - INFO - 无法提取最终答案
+2025-12-12 21:47:56,542 - INFO - **********
+2025-12-12 21:47:56,542 - INFO - Query: what was the percentage change in total rental expense under operating leases from july 2 , 2005 to july 1 , 2006?
+2025-12-12 21:47:56,542 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/SYY_2006_page_71.csv
+2025-12-12 21:47:56,542 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:47:56,543 - INFO - 成功加载表格数据，共 6 行，列数: 2
+2025-12-12 21:47:56,543 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount']
+2025-12-12 21:47:56,543 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:47:56,545 - INFO - 表格清洗完成，新表名: SYY_2006_page_71
+2025-12-12 21:47:56,545 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount']
+2025-12-12 21:47:56,545 - INFO - 清洗后表格大小: (6, 2)
+2025-12-12 21:47:56,545 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: SYY_2006_page_71
+2025-12-12 21:47:56,545 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp7q_dsd96.csv
+2025-12-12 21:47:56,546 - INFO - 0. Generate table description.
+2025-12-12 21:47:56,546 - INFO - Get table schema...
+2025-12-12 21:47:56,546 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/SYY_2006_page_71.json
+2025-12-12 21:47:56,546 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/SYY_2006_page_71.json
+2025-12-12 21:47:56,546 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:47:56,546 - INFO - 1.1 Query Planning...
+2025-12-12 21:48:14,191 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:48:14,193 - INFO - cell example not found
+2025-12-12 21:48:14,193 - INFO - Refined table schema generated successfully
+2025-12-12 21:48:14,193 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:48:14,193 - INFO - *** Final Answer (elapsed time: 17.65 s) ***
+2025-12-12 21:48:14,193 - INFO - 无法提取最终答案
+2025-12-12 21:48:14,193 - INFO - **********
+2025-12-12 21:48:14,194 - INFO - Query: what percent of total recourse debt is current?
+2025-12-12 21:48:14,195 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/AES_2010_page_227.csv
+2025-12-12 21:48:14,195 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:48:14,196 - INFO - 成功加载表格数据，共 7 行，列数: 2
+2025-12-12 21:48:14,196 - INFO - 原始表格列名: ['December 31,', 'Annual Maturities  (in millions)']
+2025-12-12 21:48:14,196 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:48:14,197 - INFO - 表格清洗完成，新表名: AES_2010_page_227
+2025-12-12 21:48:14,198 - INFO - 清洗后表格列名: ['December_31', 'Annual_Maturities_in_millions']
+2025-12-12 21:48:14,198 - INFO - 清洗后表格大小: (7, 2)
+2025-12-12 21:48:14,198 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: AES_2010_page_227
+2025-12-12 21:48:14,198 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpccvw9j44.csv
+2025-12-12 21:48:14,198 - INFO - 0. Generate table description.
+2025-12-12 21:48:14,198 - INFO - Get table schema...
+2025-12-12 21:48:14,198 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/AES_2010_page_227.json
+2025-12-12 21:48:14,199 - INFO - Generating paragraph schema...
+2025-12-12 21:48:14,199 - INFO - Input paragraphs: the aes corporation notes to consolidated financial statements 2014 ( continued ) december 31 , 2010 , 2009 , and 2008 recourse debt as of december 31 , 2010 is scheduled to reach maturity as set forth in the table below : december 31 , annual maturities ( in millions ) . recourse debt transactions during 2010 , the company redeemed $ 690 million aggregate principal of its 8.75% ( 8.75 % ) second priority senior secured notes due 2013 ( 201cthe 2013 notes 201d ) . the 2013 notes were redeemed at a redemption price equal to 101.458% ( 101.458 % ) of the principal amount redeemed . the company recognized a pre-tax loss on the redemption of the 2013 notes of $ 15 million for the year ended december 31 , 2010 , which is included in 201cother expense 201d in the accompanying consolidated statement of operations . on july 29 , 2010 , the company entered into a second amendment ( 201camendment no . 2 201d ) to the fourth amended and restated credit and reimbursement agreement , dated as of july 29 , 2008 , among the company , various subsidiary guarantors and various lending institutions ( the 201cexisting credit agreement 201d ) that amends and restates the existing credit agreement ( as so amended and restated by amendment no . 2 , the 201cfifth amended and restated credit agreement 201d ) . the fifth amended and restated credit agreement adjusted the terms and conditions of the existing credit agreement , including the following changes : 2022 the aggregate commitment for the revolving credit loan facility was increased to $ 800 million ; 2022 the final maturity date of the revolving credit loan facility was extended to january 29 , 2015 ; 2022 changes to the facility fee applicable to the revolving credit loan facility ; 2022 the interest rate margin applicable to the revolving credit loan facility is now based on the credit rating assigned to the loans under the credit agreement , with pricing currently at libor + 3.00% ( 3.00 % ) ; 2022 there is an undrawn fee of 0.625% ( 0.625 % ) per annum ; 2022 the company may incur a combination of additional term loan and revolver commitments so long as total term loan and revolver commitments ( including those currently outstanding ) do not exceed $ 1.4 billion ; and 2022 the negative pledge ( i.e. , a cap on first lien debt ) of $ 3.0 billion . recourse debt covenants and guarantees certain of the company 2019s obligations under the senior secured credit facility are guaranteed by its direct subsidiaries through which the company owns its interests in the aes shady point , aes hawaii , aes warrior run and aes eastern energy businesses . the company 2019s obligations under the senior secured credit facility are , subject to certain exceptions , secured by : ( i ) all of the capital stock of domestic subsidiaries owned directly by the company and 65% ( 65 % ) of the capital stock of certain foreign subsidiaries owned directly or indirectly by the company ; and .
+2025-12-12 21:48:14,199 - INFO - Input question: what percent of total recourse debt is current?
+2025-12-12 21:48:14,200 - INFO - Created LLM config from Weaver: {'llm': {'api_type': 'openai', 'model': 'openai/qwen3-8b', 'temperature': 0.1, 'max_tokens': 2048, 'timeout': 60, 'api_base': 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'api_key': 'sk-1777dc9ca8564249a388c385d6a23e54'}}
+2025-12-12 21:51:24,121 - INFO - 初始化Weaver框架...
+2025-12-12 21:51:24,130 - INFO - Weaver框架初始化完成
+2025-12-12 21:51:24,137 - INFO - TableZoomer执行器初始化完成
+2025-12-12 21:51:24,140 - INFO - Query: what is the net change in net revenue during 2015 for entergy corporation?
+2025-12-12 21:51:24,140 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ETR_2016_page_23.csv
+2025-12-12 21:51:24,140 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:51:24,142 - INFO - 成功加载表格数据，共 8 行，列数: 2
+2025-12-12 21:51:24,142 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount (In Millions)']
+2025-12-12 21:51:24,142 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:51:24,147 - INFO - 表格清洗完成，新表名: ETR_2016_page_23
+2025-12-12 21:51:24,147 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount_In_Millions']
+2025-12-12 21:51:24,147 - INFO - 清洗后表格大小: (8, 2)
+2025-12-12 21:51:24,147 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ETR_2016_page_23
+2025-12-12 21:51:24,148 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp57a27bd6.csv
+2025-12-12 21:51:24,148 - INFO - 0. Generate table description.
+2025-12-12 21:51:24,149 - INFO - Get table schema...
+2025-12-12 21:51:24,149 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ETR_2016_page_23.json
+2025-12-12 21:51:24,149 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ETR_2016_page_23.json
+2025-12-12 21:51:24,149 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:51:24,149 - INFO - 1.1 Query Planning...
+2025-12-12 21:51:36,968 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:51:36,971 - INFO - Refined table schema generated successfully
+2025-12-12 21:51:36,971 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:51:36,972 - INFO - *** Final Answer (elapsed time: 12.83 s) ***
+2025-12-12 21:51:36,972 - INFO - 无法提取最终答案
+2025-12-12 21:51:36,972 - INFO - **********
+2025-12-12 21:51:36,973 - INFO - Query: what percentage of total facilities as measured in square feet are leased?
+2025-12-12 21:51:36,973 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/INTC_2015_page_41.csv
+2025-12-12 21:51:36,973 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:51:36,973 - INFO - 成功加载表格数据，共 3 行，列数: 4
+2025-12-12 21:51:36,973 - INFO - 原始表格列名: ['(Square Feet in Millions)', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:51:36,973 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:51:36,975 - INFO - 表格清洗完成，新表名: INTC_2015_page_41
+2025-12-12 21:51:36,975 - INFO - 清洗后表格列名: ['Square_Feet_in_Millions', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:51:36,975 - INFO - 清洗后表格大小: (3, 4)
+2025-12-12 21:51:36,975 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: INTC_2015_page_41
+2025-12-12 21:51:36,975 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmphtnzlat_.csv
+2025-12-12 21:51:36,976 - INFO - 0. Generate table description.
+2025-12-12 21:51:36,976 - INFO - Get table schema...
+2025-12-12 21:51:36,976 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/INTC_2015_page_41.json
+2025-12-12 21:51:36,976 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/INTC_2015_page_41.json
+2025-12-12 21:51:36,976 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:51:36,976 - INFO - 1.1 Query Planning...
+2025-12-12 21:51:57,780 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:51:57,781 - INFO - cell example not found
+2025-12-12 21:51:57,782 - INFO - Refined table schema generated successfully
+2025-12-12 21:51:57,782 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:51:57,783 - INFO - *** Final Answer (elapsed time: 20.81 s) ***
+2025-12-12 21:51:57,783 - INFO - 无法提取最终答案
+2025-12-12 21:51:57,783 - INFO - **********
+2025-12-12 21:51:57,783 - INFO - Query: what is the percentage change in cash flow hedges in 2011 compare to the 2010?
+2025-12-12 21:51:57,783 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ADI_2011_page_61.csv
+2025-12-12 21:51:57,783 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:51:57,785 - INFO - 成功加载表格数据，共 2 行，列数: 3
+2025-12-12 21:51:57,785 - INFO - 原始表格列名: ['Statement of Income', 'October 29, 2011', 'October 30, 2010']
+2025-12-12 21:51:57,785 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:51:57,787 - INFO - 表格清洗完成，新表名: ADI_2011_page_61
+2025-12-12 21:51:57,787 - INFO - 清洗后表格列名: ['Statement_of_Income', 'October_29_2011', 'October_30_2010']
+2025-12-12 21:51:57,787 - INFO - 清洗后表格大小: (2, 3)
+2025-12-12 21:51:57,787 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ADI_2011_page_61
+2025-12-12 21:51:57,788 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmphij2_ti2.csv
+2025-12-12 21:51:57,788 - INFO - 0. Generate table description.
+2025-12-12 21:51:57,788 - INFO - Get table schema...
+2025-12-12 21:51:57,788 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ADI_2011_page_61.json
+2025-12-12 21:51:57,789 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ADI_2011_page_61.json
+2025-12-12 21:51:57,789 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:51:57,789 - INFO - 1.1 Query Planning...
+2025-12-12 21:52:19,003 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:52:19,007 - INFO - Refined table schema generated successfully
+2025-12-12 21:52:19,007 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:52:19,008 - INFO - *** Final Answer (elapsed time: 21.22 s) ***
+2025-12-12 21:52:19,008 - INFO - 无法提取最终答案
+2025-12-12 21:52:19,008 - INFO - **********
+2025-12-12 21:52:19,008 - INFO - Query: what portion of total purchase price is related to stock awards?
+2025-12-12 21:52:19,008 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/FIS_2010_page_70.csv
+2025-12-12 21:52:19,008 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:52:19,009 - INFO - 成功加载表格数据，共 2 行，列数: 2
+2025-12-12 21:52:19,009 - INFO - 原始表格列名: ['Value of Metavante common stock', '$4,066.4']
+2025-12-12 21:52:19,009 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:52:19,011 - INFO - 表格清洗完成，新表名: FIS_2010_page_70
+2025-12-12 21:52:19,011 - INFO - 清洗后表格列名: ['Value_of_Metavante_common_stock', '40664']
+2025-12-12 21:52:19,011 - INFO - 清洗后表格大小: (2, 2)
+2025-12-12 21:52:19,011 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: FIS_2010_page_70
+2025-12-12 21:52:19,011 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpr1vyh51z.csv
+2025-12-12 21:52:19,011 - INFO - 0. Generate table description.
+2025-12-12 21:52:19,011 - INFO - Get table schema...
+2025-12-12 21:52:19,011 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/FIS_2010_page_70.json
+2025-12-12 21:52:19,012 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/FIS_2010_page_70.json
+2025-12-12 21:52:19,012 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:52:19,012 - INFO - 1.1 Query Planning...
+2025-12-12 21:52:37,658 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:52:37,661 - INFO - Refined table schema generated successfully
+2025-12-12 21:52:37,661 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:52:37,662 - INFO - *** Final Answer (elapsed time: 18.65 s) ***
+2025-12-12 21:52:37,662 - INFO - 无法提取最终答案
+2025-12-12 21:52:37,662 - INFO - **********
+2025-12-12 21:52:37,662 - INFO - Query: what was the difference in percentage cumulative total shareholder return on masco common stock versus the s&p 500 index for the five year period ended 2017?
+2025-12-12 21:52:37,662 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/MAS_2017_page_27.csv
+2025-12-12 21:52:37,662 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:52:37,663 - INFO - 成功加载表格数据，共 4 行，列数: 6
+2025-12-12 21:52:37,663 - INFO - 原始表格列名: ['Unnamed: 0', '2013', '2014', '2015', '2016', '2017']
+2025-12-12 21:52:37,663 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:52:37,665 - INFO - 表格清洗完成，新表名: MAS_2017_page_27
+2025-12-12 21:52:37,665 - INFO - 清洗后表格列名: ['Unnamed_0', '2013', '2014', '2015', '2016', '2017']
+2025-12-12 21:52:37,665 - INFO - 清洗后表格大小: (4, 6)
+2025-12-12 21:52:37,665 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: MAS_2017_page_27
+2025-12-12 21:52:37,666 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpyjt_it0s.csv
+2025-12-12 21:52:37,666 - INFO - 0. Generate table description.
+2025-12-12 21:52:37,666 - INFO - Get table schema...
+2025-12-12 21:52:37,666 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/MAS_2017_page_27.json
+2025-12-12 21:52:37,667 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/MAS_2017_page_27.json
+2025-12-12 21:52:37,667 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:52:37,667 - INFO - 1.1 Query Planning...
+2025-12-12 21:55:39,196 - INFO - 初始化Weaver框架...
+2025-12-12 21:55:39,205 - INFO - Weaver框架初始化完成
+2025-12-12 21:55:39,212 - INFO - TableZoomer执行器初始化完成
+2025-12-12 21:55:39,216 - INFO - Query: what is the net change in net revenue during 2015 for entergy corporation?
+2025-12-12 21:55:39,216 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ETR_2016_page_23.csv
+2025-12-12 21:55:39,216 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:55:39,218 - INFO - 成功加载表格数据，共 8 行，列数: 2
+2025-12-12 21:55:39,218 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount (In Millions)']
+2025-12-12 21:55:39,218 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:55:39,223 - INFO - 表格清洗完成，新表名: ETR_2016_page_23
+2025-12-12 21:55:39,224 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount_In_Millions']
+2025-12-12 21:55:39,224 - INFO - 清洗后表格大小: (8, 2)
+2025-12-12 21:55:39,224 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ETR_2016_page_23
+2025-12-12 21:55:39,225 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpyrdhm311.csv
+2025-12-12 21:55:39,225 - INFO - 0. Generate table description.
+2025-12-12 21:55:39,225 - INFO - Get table schema...
+2025-12-12 21:55:39,225 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ETR_2016_page_23.json
+2025-12-12 21:55:39,225 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ETR_2016_page_23.json
+2025-12-12 21:55:39,225 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:55:39,225 - INFO - 1.1 Query Planning...
+2025-12-12 21:56:09,393 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:56:09,398 - INFO - Refined table schema generated successfully
+2025-12-12 21:56:09,398 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:56:09,399 - INFO - *** Final Answer (elapsed time: 30.18 s) ***
+2025-12-12 21:56:09,399 - INFO - 无法提取最终答案
+2025-12-12 21:56:09,399 - INFO - **********
+2025-12-12 21:56:09,399 - INFO - Query: what percentage of total facilities as measured in square feet are leased?
+2025-12-12 21:56:09,399 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/INTC_2015_page_41.csv
+2025-12-12 21:56:09,399 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:56:09,400 - INFO - 成功加载表格数据，共 3 行，列数: 4
+2025-12-12 21:56:09,400 - INFO - 原始表格列名: ['(Square Feet in Millions)', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:56:09,400 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:56:09,401 - INFO - 表格清洗完成，新表名: INTC_2015_page_41
+2025-12-12 21:56:09,401 - INFO - 清洗后表格列名: ['Square_Feet_in_Millions', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:56:09,401 - INFO - 清洗后表格大小: (3, 4)
+2025-12-12 21:56:09,401 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: INTC_2015_page_41
+2025-12-12 21:56:09,402 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmphqhrnma_.csv
+2025-12-12 21:56:09,402 - INFO - 0. Generate table description.
+2025-12-12 21:56:09,402 - INFO - Get table schema...
+2025-12-12 21:56:09,402 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/INTC_2015_page_41.json
+2025-12-12 21:56:09,403 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/INTC_2015_page_41.json
+2025-12-12 21:56:09,403 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:56:09,403 - INFO - 1.1 Query Planning...
+2025-12-12 21:56:37,274 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:56:37,277 - INFO - cell example not found
+2025-12-12 21:56:37,278 - INFO - Refined table schema generated successfully
+2025-12-12 21:56:37,278 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:56:37,279 - INFO - *** Final Answer (elapsed time: 27.88 s) ***
+2025-12-12 21:56:37,279 - INFO - 无法提取最终答案
+2025-12-12 21:56:37,279 - INFO - **********
+2025-12-12 21:56:37,279 - INFO - Query: what is the percentage change in cash flow hedges in 2011 compare to the 2010?
+2025-12-12 21:56:37,279 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ADI_2011_page_61.csv
+2025-12-12 21:56:37,279 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:56:37,281 - INFO - 成功加载表格数据，共 2 行，列数: 3
+2025-12-12 21:56:37,281 - INFO - 原始表格列名: ['Statement of Income', 'October 29, 2011', 'October 30, 2010']
+2025-12-12 21:56:37,281 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:56:37,284 - INFO - 表格清洗完成，新表名: ADI_2011_page_61
+2025-12-12 21:56:37,284 - INFO - 清洗后表格列名: ['Statement_of_Income', 'October_29_2011', 'October_30_2010']
+2025-12-12 21:56:37,284 - INFO - 清洗后表格大小: (2, 3)
+2025-12-12 21:56:37,284 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ADI_2011_page_61
+2025-12-12 21:56:37,285 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpuiowx1s_.csv
+2025-12-12 21:56:37,285 - INFO - 0. Generate table description.
+2025-12-12 21:56:37,285 - INFO - Get table schema...
+2025-12-12 21:56:37,285 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ADI_2011_page_61.json
+2025-12-12 21:56:37,286 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ADI_2011_page_61.json
+2025-12-12 21:56:37,286 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:56:37,286 - INFO - 1.1 Query Planning...
+2025-12-12 21:56:55,278 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:56:55,283 - INFO - Refined table schema generated successfully
+2025-12-12 21:56:55,283 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:56:55,284 - INFO - *** Final Answer (elapsed time: 18.0 s) ***
+2025-12-12 21:56:55,284 - INFO - 无法提取最终答案
+2025-12-12 21:56:55,284 - INFO - **********
+2025-12-12 21:56:55,284 - INFO - Query: what portion of total purchase price is related to stock awards?
+2025-12-12 21:56:55,284 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/FIS_2010_page_70.csv
+2025-12-12 21:56:55,284 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:56:55,285 - INFO - 成功加载表格数据，共 2 行，列数: 2
+2025-12-12 21:56:55,285 - INFO - 原始表格列名: ['Value of Metavante common stock', '$4,066.4']
+2025-12-12 21:56:55,285 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:56:55,286 - INFO - 表格清洗完成，新表名: FIS_2010_page_70
+2025-12-12 21:56:55,286 - INFO - 清洗后表格列名: ['Value_of_Metavante_common_stock', '40664']
+2025-12-12 21:56:55,286 - INFO - 清洗后表格大小: (2, 2)
+2025-12-12 21:56:55,286 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: FIS_2010_page_70
+2025-12-12 21:56:55,287 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpd0ig2dpv.csv
+2025-12-12 21:56:55,287 - INFO - 0. Generate table description.
+2025-12-12 21:56:55,287 - INFO - Get table schema...
+2025-12-12 21:56:55,287 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/FIS_2010_page_70.json
+2025-12-12 21:56:55,288 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/FIS_2010_page_70.json
+2025-12-12 21:56:55,288 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:56:55,288 - INFO - 1.1 Query Planning...
+2025-12-12 21:59:22,434 - INFO - 初始化Weaver框架...
+2025-12-12 21:59:22,444 - INFO - Weaver框架初始化完成
+2025-12-12 21:59:22,451 - INFO - TableZoomer执行器初始化完成
+2025-12-12 21:59:22,454 - INFO - Query: what is the net change in net revenue during 2015 for entergy corporation?
+2025-12-12 21:59:22,454 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ETR_2016_page_23.csv
+2025-12-12 21:59:22,455 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:59:22,456 - INFO - 成功加载表格数据，共 8 行，列数: 2
+2025-12-12 21:59:22,457 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount (In Millions)']
+2025-12-12 21:59:22,457 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:59:22,462 - INFO - 表格清洗完成，新表名: ETR_2016_page_23
+2025-12-12 21:59:22,462 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount_In_Millions']
+2025-12-12 21:59:22,462 - INFO - 清洗后表格大小: (8, 2)
+2025-12-12 21:59:22,462 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ETR_2016_page_23
+2025-12-12 21:59:22,463 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp5tld94_q.csv
+2025-12-12 21:59:22,463 - INFO - 0. Generate table description.
+2025-12-12 21:59:22,463 - INFO - Get table schema...
+2025-12-12 21:59:22,463 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ETR_2016_page_23.json
+2025-12-12 21:59:22,463 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ETR_2016_page_23.json
+2025-12-12 21:59:22,463 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:59:22,463 - INFO - 1.1 Query Planning...
+2025-12-12 21:59:39,924 - INFO - 1.2 Table schema refinement...
+2025-12-12 21:59:39,927 - INFO - Refined table schema generated successfully
+2025-12-12 21:59:39,927 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 21:59:39,930 - INFO - *** Final Answer (elapsed time: 17.48 s) ***
+2025-12-12 21:59:39,931 - INFO - 无法提取最终答案
+2025-12-12 21:59:39,931 - INFO - **********
+2025-12-12 21:59:39,931 - INFO - Query: what percentage of total facilities as measured in square feet are leased?
+2025-12-12 21:59:39,931 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/INTC_2015_page_41.csv
+2025-12-12 21:59:39,931 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 21:59:39,932 - INFO - 成功加载表格数据，共 3 行，列数: 4
+2025-12-12 21:59:39,932 - INFO - 原始表格列名: ['(Square Feet in Millions)', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:59:39,932 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 21:59:39,933 - INFO - 表格清洗完成，新表名: INTC_2015_page_41
+2025-12-12 21:59:39,933 - INFO - 清洗后表格列名: ['Square_Feet_in_Millions', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 21:59:39,933 - INFO - 清洗后表格大小: (3, 4)
+2025-12-12 21:59:39,933 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: INTC_2015_page_41
+2025-12-12 21:59:39,934 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp2gfyh9_5.csv
+2025-12-12 21:59:39,934 - INFO - 0. Generate table description.
+2025-12-12 21:59:39,934 - INFO - Get table schema...
+2025-12-12 21:59:39,934 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/INTC_2015_page_41.json
+2025-12-12 21:59:39,934 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/INTC_2015_page_41.json
+2025-12-12 21:59:39,934 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 21:59:39,934 - INFO - 1.1 Query Planning...
+2025-12-12 22:00:01,615 - INFO - 1.2 Table schema refinement...
+2025-12-12 22:00:01,616 - INFO - cell example not found
+2025-12-12 22:00:01,617 - INFO - Refined table schema generated successfully
+2025-12-12 22:00:01,617 - INFO - Starting TableZoomer plan-execute framework with dual schema support...
+2025-12-12 22:00:01,619 - INFO - *** Final Answer (elapsed time: 21.69 s) ***
+2025-12-12 22:00:01,619 - INFO - 无法提取最终答案
+2025-12-12 22:00:01,619 - INFO - **********
+2025-12-12 22:00:01,619 - INFO - Query: what is the percentage change in cash flow hedges in 2011 compare to the 2010?
+2025-12-12 22:00:01,619 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ADI_2011_page_61.csv
+2025-12-12 22:00:01,619 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 22:00:01,621 - INFO - 成功加载表格数据，共 2 行，列数: 3
+2025-12-12 22:00:01,621 - INFO - 原始表格列名: ['Statement of Income', 'October 29, 2011', 'October 30, 2010']
+2025-12-12 22:00:01,621 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 22:00:01,623 - INFO - 表格清洗完成，新表名: ADI_2011_page_61
+2025-12-12 22:00:01,623 - INFO - 清洗后表格列名: ['Statement_of_Income', 'October_29_2011', 'October_30_2010']
+2025-12-12 22:00:01,623 - INFO - 清洗后表格大小: (2, 3)
+2025-12-12 22:00:01,623 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ADI_2011_page_61
+2025-12-12 22:00:01,624 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpzu6r4xjg.csv
+2025-12-12 22:00:01,624 - INFO - 0. Generate table description.
+2025-12-12 22:00:01,625 - INFO - Get table schema...
+2025-12-12 22:00:01,625 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ADI_2011_page_61.json
+2025-12-12 22:00:01,625 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ADI_2011_page_61.json
+2025-12-12 22:00:01,625 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 22:00:01,625 - INFO - 1.1 Query Planning...
+2025-12-12 22:37:02,438 - INFO - 初始化Weaver框架...
+2025-12-12 22:37:02,446 - INFO - Weaver框架初始化完成
+2025-12-12 22:37:02,453 - INFO - Weaver执行器初始化完成
+2025-12-12 22:37:02,457 - INFO - Query: what is the net change in net revenue during 2015 for entergy corporation?
+2025-12-12 22:37:02,457 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ETR_2016_page_23.csv
+2025-12-12 22:37:02,457 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 22:37:02,459 - INFO - 成功加载表格数据，共 8 行，列数: 2
+2025-12-12 22:37:02,459 - INFO - 原始表格列名: ['Unnamed: 0', 'Amount (In Millions)']
+2025-12-12 22:37:02,459 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 22:37:02,464 - INFO - 表格清洗完成，新表名: ETR_2016_page_23
+2025-12-12 22:37:02,464 - INFO - 清洗后表格列名: ['Unnamed_0', 'Amount_In_Millions']
+2025-12-12 22:37:02,464 - INFO - 清洗后表格大小: (8, 2)
+2025-12-12 22:37:02,464 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ETR_2016_page_23
+2025-12-12 22:37:02,465 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmp_97fajh_.csv
+2025-12-12 22:37:02,465 - INFO - 0. Generate table description.
+2025-12-12 22:37:02,465 - INFO - Get table schema...
+2025-12-12 22:37:02,465 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ETR_2016_page_23.json
+2025-12-12 22:37:02,465 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ETR_2016_page_23.json
+2025-12-12 22:37:02,465 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 22:37:02,465 - INFO - 1.1 Query Planning...
+2025-12-12 22:37:18,945 - INFO - 1.2 Table schema refinement...
+2025-12-12 22:37:18,948 - INFO - Refined table schema generated successfully
+2025-12-12 22:37:18,948 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 22:37:28,606 - INFO - *** Final Answer (elapsed time: 26.15 s) ***
+2025-12-12 22:37:28,608 - INFO - 94.0
+2025-12-12 22:37:28,608 - INFO - **********
+2025-12-12 22:37:28,608 - INFO - Query: what percentage of total facilities as measured in square feet are leased?
+2025-12-12 22:37:28,608 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/INTC_2015_page_41.csv
+2025-12-12 22:37:28,608 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 22:37:28,609 - INFO - 成功加载表格数据，共 3 行，列数: 4
+2025-12-12 22:37:28,609 - INFO - 原始表格列名: ['(Square Feet in Millions)', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 22:37:28,609 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 22:37:28,611 - INFO - 表格清洗完成，新表名: INTC_2015_page_41
+2025-12-12 22:37:28,611 - INFO - 清洗后表格列名: ['Square_Feet_in_Millions', 'UnitedStates', 'OtherCountries', 'Total']
+2025-12-12 22:37:28,611 - INFO - 清洗后表格大小: (3, 4)
+2025-12-12 22:37:28,611 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: INTC_2015_page_41
+2025-12-12 22:37:28,612 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpejxr1llt.csv
+2025-12-12 22:37:28,612 - INFO - 0. Generate table description.
+2025-12-12 22:37:28,612 - INFO - Get table schema...
+2025-12-12 22:37:28,612 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/INTC_2015_page_41.json
+2025-12-12 22:37:28,612 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/INTC_2015_page_41.json
+2025-12-12 22:37:28,612 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 22:37:28,612 - INFO - 1.1 Query Planning...
+2025-12-12 22:37:58,824 - INFO - 1.2 Table schema refinement...
+2025-12-12 22:37:58,826 - INFO - cell example not found
+2025-12-12 22:37:58,826 - INFO - Refined table schema generated successfully
+2025-12-12 22:37:58,826 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 22:38:04,492 - INFO - *** Final Answer (elapsed time: 35.88 s) ***
+2025-12-12 22:38:04,495 - INFO - 0
+2025-12-12 22:38:04,495 - INFO - **********
+2025-12-12 22:38:04,495 - INFO - Query: what is the percentage change in cash flow hedges in 2011 compare to the 2010?
+2025-12-12 22:38:04,495 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/ADI_2011_page_61.csv
+2025-12-12 22:38:04,495 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 22:38:04,497 - INFO - 成功加载表格数据，共 2 行，列数: 3
+2025-12-12 22:38:04,497 - INFO - 原始表格列名: ['Statement of Income', 'October 29, 2011', 'October 30, 2010']
+2025-12-12 22:38:04,497 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 22:38:04,500 - INFO - 表格清洗完成，新表名: ADI_2011_page_61
+2025-12-12 22:38:04,500 - INFO - 清洗后表格列名: ['Statement_of_Income', 'October_29_2011', 'October_30_2010']
+2025-12-12 22:38:04,500 - INFO - 清洗后表格大小: (2, 3)
+2025-12-12 22:38:04,500 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: ADI_2011_page_61
+2025-12-12 22:38:04,501 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpch2bg7x8.csv
+2025-12-12 22:38:04,501 - INFO - 0. Generate table description.
+2025-12-12 22:38:04,501 - INFO - Get table schema...
+2025-12-12 22:38:04,501 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/ADI_2011_page_61.json
+2025-12-12 22:38:04,502 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/ADI_2011_page_61.json
+2025-12-12 22:38:04,502 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 22:38:04,502 - INFO - 1.1 Query Planning...
+2025-12-12 22:38:27,150 - INFO - 1.2 Table schema refinement...
+2025-12-12 22:38:27,153 - INFO - Refined table schema generated successfully
+2025-12-12 22:38:27,153 - INFO - Starting Weaver plan-execute framework...
+2025-12-12 22:38:49,989 - INFO - *** Final Answer (elapsed time: 45.49 s) ***
+2025-12-12 22:38:49,991 - INFO - 0
+2025-12-12 22:38:49,991 - INFO - **********
+2025-12-12 22:38:49,992 - INFO - Query: what portion of total purchase price is related to stock awards?
+2025-12-12 22:38:49,992 - INFO - Table: /home/lilin/weaver/datasets/FINQA/csv/FIS_2010_page_70.csv
+2025-12-12 22:38:49,992 - INFO - === 预先加载和清洗表格数据 ===
+2025-12-12 22:38:49,993 - INFO - 成功加载表格数据，共 2 行，列数: 2
+2025-12-12 22:38:49,993 - INFO - 原始表格列名: ['Value of Metavante common stock', '$4,066.4']
+2025-12-12 22:38:49,993 - INFO - 使用Weaver的表格预处理逻辑清洗表格数据...
+2025-12-12 22:38:49,995 - INFO - 表格清洗完成，新表名: FIS_2010_page_70
+2025-12-12 22:38:49,995 - INFO - 清洗后表格列名: ['Value_of_Metavante_common_stock', '40664']
+2025-12-12 22:38:49,995 - INFO - 清洗后表格大小: (2, 2)
+2025-12-12 22:38:49,995 - INFO - ✅ 已将clean_table_name存储到DataFrame.attrs: FIS_2010_page_70
+2025-12-12 22:38:49,995 - INFO - ✅ 清洗后的表格已保存到临时文件: /tmp/tmpzktl9_1a.csv
+2025-12-12 22:38:49,995 - INFO - 0. Generate table description.
+2025-12-12 22:38:49,995 - INFO - Get table schema...
+2025-12-12 22:38:49,995 - INFO - Read table schema from /home/lilin/table_weaver/results/table_schemas/FIS_2010_page_70.json
+2025-12-12 22:38:49,996 - INFO - Loading existing paragraph schema from /home/lilin/table_weaver/results/paragraph_schemas/FIS_2010_page_70.json
+2025-12-12 22:38:49,996 - INFO - ** Step1: Schema Refining between table and query.
+2025-12-12 22:38:49,996 - INFO - 1.1 Query Planning...

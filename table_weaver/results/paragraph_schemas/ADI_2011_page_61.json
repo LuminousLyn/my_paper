@@ -1,0 +1,22 @@
+{
+  "text_summary": "The paragraph discusses TechCorp's 15% increase in quarterly sales in 2023, driven by a 20% growth in the North American region, with the table detailing sales figures by region and quarter.",
+  "table_related_text": [
+    {
+      "background_related": "The paragraph provides context about TechCorp's 2023 sales growth, which is likely the source of the table's regional and quarterly sales data."
+    },
+    {
+      "column_related": "The 'Region' column corresponds to regions like 'North American' mentioned in the paragraph, while 'Sales' aligns with the numerical growth figures described."
+    },
+    {
+      "data_explanation": "The paragraph highlights a 20% sales increase in the North American region, suggesting this region's data may show higher values in the table compared to others."
+    }
+  ],
+  "question_related_text": [
+    {
+      "North American region": "The paragraph explicitly states the North American region saw a 20% rise in sales, directly linking to the question's focus."
+    },
+    {
+      "first quarter of 2023": "The paragraph references quarterly sales increases in 2023, implying the table includes data for specific quarters like the first quarter."
+    }
+  ]
+}

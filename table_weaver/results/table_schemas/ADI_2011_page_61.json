@@ -1,0 +1,58 @@
+{
+  "file_path": "/tmp/tmp_qybx0ye.csv",
+  "table_name": "tmp",
+  "table_description": "This table contains financial data related to specific dates, including income statement items and their corresponding values. It is likely used for tracking financial transactions or reporting periods.",
+  "number_of_rows": 2,
+  "column_list": [
+    "Statement_of_Income",
+    "October_29_2011",
+    "October_30_2010"
+  ],
+  "cell_example": [
+    {
+      "Statement_of_Income": "Gain on Swaps",
+      "October_29_2011": "Loss on Note",
+      "October_30_2010": "Net Income Effect"
+    },
+    {
+      "Statement_of_Income": "$20,692",
+      "October_29_2011": "$(20,692)",
+      "October_30_2010": "$—"
+    }
+  ],
+  "column_description": [
+    {
+      "column_name": "Statement_of_Income",
+      "dtype": "object",
+      "example": {
+        "category_examples": [
+          "Gain on Swaps",
+          "$20,692"
+        ]
+      },
+      "specific_meaning": "Financial statement line item category, representing types of income or expenses such as 'Gain on Swaps' or 'Net Income Effect'"
+    },
+    {
+      "column_name": "October_29_2011",
+      "dtype": "object",
+      "example": {
+        "category_examples": [
+          "Loss on Note",
+          "$(20,692)"
+        ]
+      },
+      "specific_meaning": "Financial value recorded on October 29, 2011, containing entries like 'Loss on Note' or monetary amounts such as '$(20,692)'"
+    },
+    {
+      "column_name": "October_30_2010",
+      "dtype": "object",
+      "example": {
+        "category_examples": [
+          "Net Income Effect",
+          "$—"
+        ]
+      },
+      "specific_meaning": "Financial value recorded on October 30, 2010, including entries like 'Net Income Effect' or placeholder symbols such as '$—'"
+    }
+  ]
+}

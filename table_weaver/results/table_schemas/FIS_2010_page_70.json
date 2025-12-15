@@ -1,0 +1,44 @@
+{
+  "file_path": "/tmp/tmpp_dm0j7l.csv",
+  "table_name": "tmp",
+  "table_description": "Tracks stock-related metrics with categorical descriptions and their corresponding numerical values.",
+  "number_of_rows": 2,
+  "column_list": [
+    "Value_of_Metavante_common_stock",
+    "40664"
+  ],
+  "cell_example": [
+    {
+      "Value_of_Metavante_common_stock": "Value of Metavante stock awards",
+      "40664": 121.4
+    },
+    {
+      "Value_of_Metavante_common_stock": "Total purchase price",
+      "40664": 4187.8
+    }
+  ],
+  "column_description": [
+    {
+      "column_name": "Value_of_Metavante_common_stock",
+      "dtype": "object",
+      "example": {
+        "category_examples": [
+          "Value of Metavante stock awards",
+          "Total purchase price"
+        ]
+      },
+      "specific_meaning": "Describes the type of stock value, such as awards or purchase prices."
+    },
+    {
+      "column_name": "40664",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          121.4,
+          4187.8
+        ]
+      },
+      "specific_meaning": "Represents the numerical value associated with the stock category, measured in monetary units."
+    }
+  ]
+}

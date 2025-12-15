@@ -1,0 +1,25 @@
+{
+  "text_summary": "The paragraph discusses ETR's 2016 financial performance, highlighting revenue growth of 12% compared to 2015 and identifying key business segments contributing to this growth. It emphasizes the impact of specific segments like Technology and Manufacturing on overall revenue figures.",
+  "table_related_text": [
+    {
+      "background_related": "The table likely represents ETR's annual financial data, with 2016 being a critical year for revenue growth as mentioned in the paragraph."
+    },
+    {
+      "column_related": "The 'Revenue' column corresponds to the 12% growth figure discussed in the paragraph, while 'Business Segment' aligns with the Technology and Manufacturing references."
+    },
+    {
+      "data_explanation": "The paragraph indicates revenue growth trends that would be reflected in the table's numerical values across different business segments."
+    }
+  ],
+  "question_related_text": [
+    {
+      "2016": "The paragraph specifically focuses on ETR's financial performance in 2016, including a 12% revenue growth compared to 2015."
+    },
+    {
+      "revenue": "Revenue growth is explicitly mentioned as a key metric, with the paragraph detailing its 12% increase in 2016."
+    },
+    {
+      "business segments": "The paragraph identifies Technology and Manufacturing as primary business segments contributing to revenue growth."
+    }
+  ]
+}

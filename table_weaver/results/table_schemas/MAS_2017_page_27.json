@@ -1,0 +1,128 @@
+{
+  "file_path": "/tmp/tmpmpg1556m.csv",
+  "table_name": "tmp",
+  "table_description": "Tracks annual performance metrics for various financial entities or indices from 2013 to 2017, with numerical values representing measured quantities.",
+  "number_of_rows": 4,
+  "column_list": [
+    "Unnamed_0",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017"
+  ],
+  "cell_example": [
+    {
+      "Unnamed_0": "Masco",
+      "2013": 138.48,
+      "2014": 155.26,
+      "2015": 200.79,
+      "2016": 227.08,
+      "2017": 318.46
+    },
+    {
+      "Unnamed_0": "S&P 500 Index",
+      "2013": 132.04,
+      "2014": 149.89,
+      "2015": 151.94,
+      "2016": 169.82,
+      "2017": 206.49
+    },
+    {
+      "Unnamed_0": "S&P Industrials Index",
+      "2013": 140.18,
+      "2014": 153.73,
+      "2015": 149.83,
+      "2016": 177.65,
+      "2017": 214.55
+    },
+    {
+      "Unnamed_0": "S&P Consumer Durables & Apparel Index",
+      "2013": 135.84,
+      "2014": 148.31,
+      "2015": 147.23,
+      "2016": 138.82,
+      "2017": 164.39
+    }
+  ],
+  "column_description": [
+    {
+      "column_name": "Unnamed_0",
+      "dtype": "object",
+      "example": {
+        "category_examples": [
+          "Masco",
+          "S&P 500 Index",
+          "S&P Industrials Index",
+          "S&P Consumer Durables & Apparel Index"
+        ]
+      },
+      "specific_meaning": "Financial entity or index identifier, with 4 category examples displayed"
+    },
+    {
+      "column_name": "2013",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          138.48,
+          132.04,
+          140.18,
+          135.84
+        ]
+      },
+      "specific_meaning": "Performance metric value for the year 2013, with float64 data type"
+    },
+    {
+      "column_name": "2014",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          155.26,
+          149.89,
+          153.73,
+          148.31
+        ]
+      },
+      "specific_meaning": "Performance metric value for the year 2014, with float64 data type"
+    },
+    {
+      "column_name": "2015",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          200.79,
+          151.94,
+          149.83,
+          147.23
+        ]
+      },
+      "specific_meaning": "Performance metric value for the year 2015, with float64 data type"
+    },
+    {
+      "column_name": "2016",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          227.08,
+          169.82,
+          177.65,
+          138.82
+        ]
+      },
+      "specific_meaning": "Performance metric value for the year 2016, with float64 data type"
+    },
+    {
+      "column_name": "2017",
+      "dtype": "float64",
+      "example": {
+        "category_examples": [
+          318.46,
+          206.49,
+          214.55,
+          164.39
+        ]
+      },
+      "specific_meaning": "Performance metric value for the year 2017, with float64 data type"
+    }
+  ]
+}

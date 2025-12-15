@@ -1,0 +1,368 @@
+{
+    "file_path": "data/databench_test/DataBench/test/080_Books/all.csv",
+    "table_name": "080_Books",
+    "table_description": "This table contains comprehensive information about books including titles, authors, categories, pricing details, stock availability, and user engagement metrics. It is suitable for inventory management, sales analysis, and recommendation systems.",
+    "number_of_rows": 40,
+    "column_list": [
+        "Book Title",
+        "Author",
+        "Category",
+        "Price (TK)",
+        "Stock Status",
+        "Copies Left",
+        "Book Length (Pages)",
+        "Edition",
+        "Publication",
+        "Wished Users",
+        "Discount Offer",
+        "Ratings",
+        "Reviews"
+    ],
+    "cell_example": [
+        {
+            "Book Title": "TataLog Eight Modern Stories from a Timeless Institution",
+            "Author": "Harish Bhat",
+            "Category": "Business, Investment and Economics",
+            "Price (TK)": 898.0,
+            "Stock Status": "In Stock",
+            "Copies Left": 5.0,
+            "Book Length (Pages)": 224,
+            "Edition": "Edition",
+            "Publication": "Penguin Business (India)",
+            "Wished Users": NaN,
+            "Discount Offer": "Yes",
+            "Ratings": 3.0,
+            "Reviews": 0.0
+        },
+        {
+            "Book Title": "Tata Stories",
+            "Author": "Harish Bhat",
+            "Category": "Foreign Language Books",
+            "Price (TK)": 1.078,
+            "Stock Status": "In Stock",
+            "Copies Left": 5.0,
+            "Book Length (Pages)": 202,
+            "Edition": "1st Edition",
+            "Publication": "Portfolio Penguin (India)",
+            "Wished Users": NaN,
+            "Discount Offer": "Yes",
+            "Ratings": 2.0,
+            "Reviews": 0.0
+        },
+        {
+            "Book Title": "The Post American World And The Rise Of The Rest",
+            "Author": "Fareed Zakaria",
+            "Category": "International Politics",
+            "Price (TK)": 2.343,
+            "Stock Status": "In Stock",
+            "Copies Left": 1.0,
+            "Book Length (Pages)": 292,
+            "Edition": "1st Edition",
+            "Publication": "Penguin Books (India)",
+            "Wished Users": NaN,
+            "Discount Offer": "Yes",
+            "Ratings": 10.0,
+            "Reviews": 2.0
+        },
+        {
+            "Book Title": "The Startup Wife",
+            "Author": "Tahmima Anam",
+            "Category": "Novel",
+            "Price (TK)": 1.078,
+            "Stock Status": "In Stock",
+            "Copies Left": 1.0,
+            "Book Length (Pages)": 304,
+            "Edition": "Published",
+            "Publication": "Penguin Books (India)",
+            "Wished Users": NaN,
+            "Discount Offer": "Yes",
+            "Ratings": 4.0,
+            "Reviews": 0.0
+        },
+        {
+            "Book Title": "Madinah Arabic Reader 1",
+            "Author": "Dr. V. Abdur Rahim",
+            "Category": "Islamic Books",
+            "Price (TK)": 528.0,
+            "Stock Status": "In Stock",
+            "Copies Left": 21.0,
+            "Book Length (Pages)": 80,
+            "Edition": "1st Edition 2011",
+            "Publication": "Goodword Books (India)",
+            "Wished Users": NaN,
+            "Discount Offer": "Yes",
+            "Ratings": 6.0,
+            "Reviews": 3.0
+        },
+        {
+            "Book Title": "How to Win Friends and Influence People",
+            "Author": "Dale Carnegie",
+            "Category": "Self-help and meditation",
+            "Price (TK)": 350.0,
+            "Stock Status": "In Stock",
+            "Copies Left": 27.0,
+            "Book Length (Pages)": 240,
+            "Edition": "1st Edition",
+            "Publication": "Maanu Graphics Publishers (India)",
+            "Wished Users": 967.0,
+            "Discount Offer": "Yes",
+            "Ratings": 85.0,
+            "Reviews": 29.0
+        },
+        {
+            "Book Title": "A Thousand Splendid Suns",
+            "Author": "Khaled Hosseini",
+            "Category": "Novel",
+            "Price (TK)": 1.198,
+            "Stock Status": "In Stock",
+            "Copies Left": 8.0,
+            "Book Length (Pages)": 419,
+            "Edition": "1st Edition",
+            "Publication": "Bloomsbury Publishing (India)",
+            "Wished Users": 277.0,
+            "Discount Offer": "Yes",
+            "Ratings": 27.0,
+            "Reviews": 13.0
+        },
+        {
+            "Book Title": "The Wealth of Nations : Fingerprint",
+            "Author": "Adam Smith",
+            "Category": "Business, Investment and Economics",
+            "Price (TK)": 1.498,
+            "Stock Status": "In Stock",
+            "Copies Left": 5.0,
+            "Book Length (Pages)": 1144,
+            "Edition": "1st Published",
+            "Publication": "Fingerprint Publishing (India)",
+            "Wished Users": NaN,
+            "Discount Offer": "Yes",
+            "Ratings": 0.0,
+            "Reviews": 0.0
+        },
+        {
+            "Book Title": "The Old Man and The Sea",
+            "Author": "Ernest Hemingway",
+            "Category": "Novel",
+            "Price (TK)": 150.0,
+            "Stock Status": "In Stock",
+            "Copies Left": 0.0,
+            "Book Length (Pages)": 104,
+            "Edition": "2nd Edition",
+            "Publication": "Friend's Book Corner",
+            "Wished Users": 453.0,
+            "Discount Offer": "Yes",
+            "Ratings": 73.0,
+            "Reviews": 54.0
+        },
+        {
+            "Book Title": "The Alchemist",
+            "Author": "Paulo Coelho",
+            "Category": "Novel",
+            "Price (TK)": 798.0,
+            "Stock Status": "In Stock",
+            "Copies Left": 44.0,
+            "Book Length (Pages)": 172,
+            "Edition": "1st Edition",
+            "Publication": "Harpercollins Publishers (India)",
+            "Wished Users": 1.47,
+            "Discount Offer": "Yes",
+            "Ratings": NaN,
+            "Reviews": NaN
+        }
+    ],
+    "column_description": [
+        {
+            "column_name": "Book Title",
+            "dtype": "object",
+            "example": {
+                "category_examples": [
+                    "Sapiens A Brief History Of Humankind",
+                    "The Intelligent Investor",
+                    "Madinah Arabic Reader 1",
+                    "The Quran",
+                    "Let Us C, 19th Edition",
+                    "400 Days",
+                    "War And Peace",
+                    "Ecotourism",
+                    "Managing Tourism and Hospitality Services",
+                    "Tata Stories"
+                ],
+                "total_number_of_categories": 40,
+                "caption": "There are many types in this column, displaying the top 10 most common types"
+            },
+            "specific_meaning": "Represents the title of the book, with 40 distinct categories and examples such as 'Sapiens A Brief History Of Humankind' and 'The Quran'"
+        },
+        {
+            "column_name": "Author",
+            "dtype": "object",
+            "example": {
+                "category_examples": [
+                    "Chetan Bhagat",
+                    "Harish Bhat",
+                    "Leil Lowndes",
+                    "Benjamin Graham",
+                    "Yuval Noah Harari",
+                    "Yashavant Kanetkar",
+                    "M.A.S. Abdel Haleem (Translator)",
+                    "Dr. V. Abdur Rahim",
+                    "Harish Bhat , B.S. Badan",
+                    "Gianna Moscardo (Editor), Bruce Prideaux (Editor), Eric Laws (Editor)"
+                ],
+                "total_number_of_categories": 37,
+                "caption": "There are many types in this column, displaying the top 10 most common types"
+            },
+            "specific_meaning": "Indicates the author's name, featuring 37 distinct categories including names like 'Chetan Bhagat' and 'Yuval Noah Harari'"
+        },
+        {
+            "column_name": "Category",
+            "dtype": "object",
+            "example": {
+                "category_examples": [
+                    "Self-help and meditation",
+                    "Novel",
+                    "Business, Investment and Economics",
+                    "Tourism and Hospitality ",
+                    "Islamic Books",
+                    " Novel",
+                    " Business, Investment and Economics",
+                    "Foreign Language Books",
+                    "Computer Science & Engineering",
+                    "History and Tradition"
+                ],
+                "total_number_of_categories": 15,
+                "caption": "There are many types in this column, displaying the top 10 most common types"
+            },
+            "specific_meaning": "Classifies the book into thematic genres, with 15 distinct categories such as 'Self-help and meditation' and 'Tourism and Hospitality '"
+        },
+        {
+            "column_name": "Price (TK)",
+            "dtype": "float64",
+            "example": {
+                "minimum_value": 1.078,
+                "maximum_value": 998.0,
+                "median_value": 374.0,
+                "average_value": 376.2595
+            },
+            "specific_meaning": "Stores the book's price in Taka (TK), ranging from 1.078 to 998.0 with an average of 376.26"
+        },
+        {
+            "column_name": "Stock Status",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "In Stock",
+                    "Out stock"
+                ]
+            },
+            "specific_meaning": "Indicates the availability status of the book, with 2 categories: 'In Stock' and 'Out stock'"
+        },
+        {
+            "column_name": "Copies Left",
+            "dtype": "float64",
+            "example": {
+                "minimum_value": 0.0,
+                "maximum_value": 44.0,
+                "median_value": 5.5,
+                "average_value": 11.81578947368421
+            },
+            "specific_meaning": "Quantifies the remaining stock quantity, ranging from 0.0 to 44.0 with an average of 11.82"
+        },
+        {
+            "column_name": "Book Length (Pages)",
+            "dtype": "int64",
+            "example": {
+                "minimum_value": 80,
+                "maximum_value": 1276,
+                "median_value": 316.0,
+                "average_value": 352.175
+            },
+            "specific_meaning": "Records the total number of pages, ranging from 80 to 1276 with an average of 352.18 pages"
+        },
+        {
+            "column_name": "Edition",
+            "dtype": "object",
+            "example": {
+                "category_examples": [
+                    "1st Edition",
+                    "Published",
+                    "Edition",
+                    "1st Published",
+                    "Reissue Edition",
+                    "1st Edition 2011",
+                    "19th Edition",
+                    "8th Impression",
+                    "Commonwealth Pub.",
+                    "12-Sep-23"
+                ],
+                "total_number_of_categories": 16,
+                "caption": "There are many types in this column, displaying the top 10 most common types"
+            },
+            "specific_meaning": "Specifies the book's edition type, with 16 distinct categories including '1st Edition' and '12-Sep-23'"
+        },
+        {
+            "column_name": "Publication",
+            "dtype": "object",
+            "example": {
+                "category_examples": [
+                    "Fingerprint Publishing (India)",
+                    "Harpercollins Publishers (India)",
+                    "Penguin Books (India)",
+                    "Bloomsbury Publishing (India)",
+                    "Amazing Reads (India)",
+                    "Vermilion London (India)",
+                    "Goodword Books (India)",
+                    "Oxford University Press, USA",
+                    "BPB Publications (India)",
+                    "Vintage Books (India)"
+                ],
+                "total_number_of_categories": 26,
+                "caption": "There are many types in this column, displaying the top 10 most common types"
+            },
+            "specific_meaning": "Identifies the publishing house, featuring 26 distinct categories such as 'Fingerprint Publishing (India)' and 'Oxford University Press, USA'"
+        },
+        {
+            "column_name": "Wished Users",
+            "dtype": "float64",
+            "example": {
+                "minimum_value": 1.47,
+                "maximum_value": 967.0,
+                "median_value": 388.0,
+                "average_value": 434.7615789473685
+            },
+            "specific_meaning": "Measures the number of users interested in purchasing, ranging from 1.47 to 967.0 with an average of 434.76"
+        },
+        {
+            "column_name": "Discount Offer",
+            "dtype": "object",
+            "example": {
+                "all_categories": [
+                    "Yes",
+                    "No"
+                ]
+            },
+            "specific_meaning": "Indicates whether a discount is available, with 2 categories: 'Yes' and 'No'"
+        },
+        {
+            "column_name": "Ratings",
+            "dtype": "float64",
+            "example": {
+                "minimum_value": 0.0,
+                "maximum_value": 85.0,
+                "median_value": 12.0,
+                "average_value": 20.236842105263158
+            },
+            "specific_meaning": "Stores user ratings, ranging from 0.0 to 85.0 with an average of 20.24"
+        },
+        {
+            "column_name": "Reviews",
+            "dtype": "float64",
+            "example": {
+                "minimum_value": 0.0,
+                "maximum_value": 54.0,
+                "median_value": 4.0,
+                "average_value": 8.921052631578947
+            },
+            "specific_meaning": "Counts the number of reviews, ranging from 0.0 to 54.0 with an average of 8.92"
+        }
+    ]
+}
